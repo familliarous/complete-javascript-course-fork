@@ -2,7 +2,7 @@
 
 let country = 'Philippines';
 let continent = 'Asia';
-let population = '114,900,000';
+let population = 114900000;
 
 console.log(country);
 console.log(continent);
@@ -19,7 +19,17 @@ console.log(typeof country);
 
 // LET, CONST, AND VAR
 
-let language = 'Filipino';
+language = 'Filipino';
 const CONTINENT = 'Asia';
 // CONTINENT = 'Africa';
 console.log(CONTINENT);
+
+// BASIC OPERATORS
+
+console.log(population / 2);
+console.log(population + 1);
+console.log(population > 6000000);
+console.log(population < 33000000);
+
+let description = country + ' is in ' + CONTINENT + ' and its ' + population + ' people speak ' + language;
+console.log(description);
