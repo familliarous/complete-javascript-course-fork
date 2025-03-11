@@ -31,5 +31,7 @@ console.log(population + 1);
 console.log(population > 6000000);
 console.log(population < 33000000);
 
+console.log(typeof null);
+
 let description = country + ' is in ' + CONTINENT + ' and its ' + population + ' people speak ' + language;
 console.log(description);
