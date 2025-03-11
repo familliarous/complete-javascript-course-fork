@@ -33,3 +33,4 @@ They will make it easier to follow along with the theory lectures.
 **And now, have a lot of fun with the course! 😁**
 
 # Fixing SSH Issues with Github
+
