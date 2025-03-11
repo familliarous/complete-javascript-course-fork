@@ -16,3 +16,10 @@ console.log(typeof isIsland);
 console.log(typeof population);
 console.log(typeof language);
 console.log(typeof country);
+
+// LET, CONST, AND VAR
+
+let language = 'Filipino';
+const CONTINENT = 'Asia';
+// CONTINENT = 'Africa';
+console.log(CONTINENT);
