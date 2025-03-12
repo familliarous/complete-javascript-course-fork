@@ -58,3 +58,13 @@ ${country} is in ${CONTINENT}
 and its ${population} people 
 speak ${language}`;
 console.log(newDescription);
+
+// TAKING DECISIONS: IF/ELSE STATEMENTS
+
+population = 114;
+
+if (population > 33) {
+    let average = (population - 33) / 2;
+    console.log(`${country}'s population is ${average} million above average`);
+
+}
