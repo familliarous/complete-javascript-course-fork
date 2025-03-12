@@ -79,3 +79,35 @@ Comparison
 - In order to add variables to the string template, {} needs to be prepended, e.g. \`${test}\`
 - Backticks take new lines, \n\\.
 - You can also enter a new line inside the IDE and it will be reflected within the text inside the backticks.
+
+# Type Conversion and Coercion
+
+- Type conversion - Converting from one type to another
+- Type coercion - JS implicitly converting types 
+- In order to perform conversion, you need to perform CASTING 
+- Casting example:
+```
+const testYear = 1991;
+console.log(Number(testYear))
+```
+- Converting a string into Number will return a NaN, which is still of type Number.
+- Numbers can also be converted into a string.
+- You cannot convert into null or undefined
+- Boolean conversion is handled differently
+
+
+- Type coercion happens when JS finds 2 values with different types.
+- In the event of string concatenation, number values will be converted to string.
+- math operators that aren't addition will trigger the opposite conversion if the value is proper, for example:
+```
+('10' - '2' - 10); // returns 89-2
+```
+
+- The last operand will determine the coercion type.
+- Although this may be the case, relying on type coercion is bad
+
+### Truthy and Falsy values 
+
+- Falsy values: 0, '', undefined, null, NaN
+- Anything inside a control block (if else) condition will be converted into a boolean. For example, if a Num is 0, it's falsy. 
+
