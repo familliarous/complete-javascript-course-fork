@@ -35,3 +35,6 @@ console.log(typeof null);
 
 let description = country + ' is in ' + CONTINENT + ' and its ' + population + ' people speak ' + language;
 console.log(description);
+
+// STRINGS AND TEMPLATE LITERALS
+

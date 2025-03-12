@@ -50,4 +50,24 @@ Comparison
 - More than >
 - Less than or Equal to <=
 - More than or Equal to >=
-- 
+
+# [12/03/2025] Notes
+
+# Operator Precedence
+
+**MDN Docs:**
+
+>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+
+- Math operations follow PEMDAS 
+- In order of precedence: \*, /, +, -
+- Comparison Operators have lower priority than math
+- Equality operators have lower priority than comparison.
+- Assignment operations have a high priority.
+- Assignment operations are RIGHT - TO - LEFT:
+- If it were left to right, the leftmost variable will likely be assigned to an uninitialized variable value
+- Grouping () has the highest priority
+
+> **Performed Coding Challenge # 1. Skipped the rest**
+
+# Strings and Template Literals
