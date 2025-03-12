@@ -71,3 +71,11 @@ Comparison
 > **Performed Coding Challenge # 1. Skipped the rest**
 
 # Strings and Template Literals
+
+- Javascript String Literals "" 
+- JS auto casts numbers into strings when concatenating
+
+- **Template Literals are denoted by BACKTICKS (\`\`)** 
+- In order to add variables to the string template, {} needs to be prepended, e.g. \`${test}\`
+- Backticks take new lines, \n\\.
+- You can also enter a new line inside the IDE and it will be reflected within the text inside the backticks.
