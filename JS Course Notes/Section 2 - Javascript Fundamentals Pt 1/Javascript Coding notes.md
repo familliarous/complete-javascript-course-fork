@@ -177,3 +177,20 @@ age >= 18 ? console.log('I can drink ALCOHOL!') : console.log('I can't drink alc
 ```
 console.log(`I like to drink. ${age >= 18 ? console.log('I can drink ALCOHOL!') : console.log('I can't drink alcohol yet.')}`)
 ```
+
+
+### Javascript brief history:
+
+- Brendan Eich created the first JS version in 10 days, Called "Mocha"
+- JS was named JAVAScript to attract Java devs, but has nothing to do with java
+- JS has been made to be backwards compatible with old JS code from 1997!
+- "Don't Break The Web!" <--- Java only adds, and doesn't deletes.
+
+### Development:
+
+- During Dev, Simply use any modern browser.
+- During production, use Babel to transpile and polyfill your code (converting back to ES5 to ensure browser compatibility for all users).
+- ES5 Supports ALL Browsers down to IE 9 from 2011;
+- ES6 does not support older browsers.
+- ESNext are future versions of the language.
+- **BABEL** is 
