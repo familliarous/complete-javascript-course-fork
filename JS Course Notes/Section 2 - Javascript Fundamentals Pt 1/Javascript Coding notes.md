@@ -133,3 +133,47 @@ prompt("What's your favorite number?")
 ### Logical Operators
 
 - && , || , and !
+### Switch Statements
+
+sample syntax:
+
+```
+switch (day) {
+
+case 'Monday':
+	console.log('Today is Monday')
+	break;
+case 'Tuesday':
+	console.log('Today is Tuesday')
+	break;
+default:
+	console.log('Somehow today is an invalid day')
+}
+```
+
+- Remember, without break, the cases proceeding the correct break will be triggered, as long as the other cases also have no break.
+- Strict comparison is done for each case.
+
+# Statements and Expressions 
+
+- An **Expression** is a statement that produces a value, e.g.
+```
+3 + 4 // Is an expression, produces 7
+```
+
+- A **Statement** is a full declaration of action sequences, e.g.:
+
+```
+const str = '23 is a number' // Is a statement, you define a variable and a value, and assign the value to a variable
+```
+
+# Ternary Operator
+
+- The ternary operator is an operator with three parts: condition, if and else:
+```
+age >= 18 ? console.log('I can drink ALCOHOL!') : console.log('I can't drink alcohol yet.')
+```
+- The ternary operator is an **EXPRESSION**!
+```
+console.log(`I like to drink. ${age >= 18 ? console.log('I can drink ALCOHOL!') : console.log('I can't drink alcohol yet.')}`)
+```

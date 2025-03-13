@@ -98,3 +98,27 @@ if (population < 50 && !isIsland) {
 } else {
     console.log(`${country} does not meet your needs :(`)
 }
+
+// THE SWITCH STATEMENT
+
+language = prompt('Enter Language');
+switch (language) {
+    case 'Chinese': case 'Mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'Spanish':
+        console.log('2nd most number of native speakers!');
+        break;
+    case 'English':
+        console.log('3rd most number of natives!');
+        break;
+    case 'Hindi':
+        console.log('4th');
+        break;
+    case 'Arabic':
+        console.log('5th!');
+        break;
+    default:
+        console.log('Great language too :D');
+        break;
+}
