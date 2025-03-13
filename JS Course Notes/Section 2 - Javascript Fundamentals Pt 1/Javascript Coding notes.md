@@ -111,3 +111,17 @@ console.log(Number(testYear))
 - Falsy values: 0, '', undefined, null, NaN
 - Anything inside a control block (if else) condition will be converted into a boolean. For example, if a Num is 0, it's falsy. 
 
+# [13/03/2025] NOTES
+
+### Equality Operators: == vs ===
+
+- the strictly equal === operator will only return true IF both sides are equal.
+- Example: `18 === 18 // True`
+- the loosely equal == operator returns true if the value, when type coerced, equals the other value.
+- Example: `'18' == 18 // True`
+- **Avoid the loose equality operator as much as you can**
+
+### Prompt Function
+
+prompt("What's your favorite number?")
+- Prompt allows for the browser prompt to be displayed
