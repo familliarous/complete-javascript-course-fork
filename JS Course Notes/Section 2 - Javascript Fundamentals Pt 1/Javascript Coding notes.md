@@ -120,8 +120,16 @@ console.log(Number(testYear))
 - the loosely equal == operator returns true if the value, when type coerced, equals the other value.
 - Example: `'18' == 18 // True`
 - **Avoid the loose equality operator as much as you can**
-
+- There also has a strict and loose version of non equal values:
+- !== and !=.
 ### Prompt Function
 
 prompt("What's your favorite number?")
 - Prompt allows for the browser prompt to be displayed
+
+### Boolean Logic
+
+- NOT operator has higher precedence than OR or AND.
+### Logical Operators
+
+- && , || , and !
