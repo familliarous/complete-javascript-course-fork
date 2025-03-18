@@ -54,3 +54,38 @@ const yearsUntilRetirement2 = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement2(1991, 'Jof'));
 console.log(yearsUntilRetirement2(1999, 'Jof2'));
+
+// ==== FUNCTIONS CALLING OTHER FUNCTIONS ====
+
+const cutPieces = function (fruit) {
+    return fruit * 4;
+};
+
+const fruitProcessor = function (apples, oranges) {
+    const applePieces = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apple
+    and ${orangePieces} pieces of orange.`;
+
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+// ==== OBJECT METHODS ====
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'Teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        return 2037 - this.birthYear;
+    }
+};
+
+console.log(jonas.calcAge(1991));
