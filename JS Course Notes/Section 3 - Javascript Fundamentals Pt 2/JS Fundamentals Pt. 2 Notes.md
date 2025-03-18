@@ -210,3 +210,32 @@ Using the **this** keyword:
 ```
 console.log(jonas)
 ```
+
+# The For Loop
+
+Syntax:
+```
+for(let rep = 1; rep <= 10; rep++) {
+	console.log(`a For Loop looping 10 times!);
+}
+```
+
+Continue - will skip an iteration.
+```
+for(let rep = 1; rep <= 10; rep++) {
+	if (condition) {
+		continue; // Skips to next iteration, if condition has not yet been met
+	}
+}
+```
+Break - will break outside the entire loop.
+
+```
+for(let rep = 1; rep <= 10; rep++) {
+	if (condition) {
+		break; // Exits the loop entirely
+	}
+}
+```
+
+> **Note:** While loops can be more versatile than for loops.
