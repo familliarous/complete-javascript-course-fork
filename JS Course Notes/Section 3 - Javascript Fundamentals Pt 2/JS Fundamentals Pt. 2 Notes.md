@@ -239,3 +239,5 @@ for(let rep = 1; rep <= 10; rep++) {
 ```
 
 > **Note:** While loops can be more versatile than for loops.
+
+# Consult the Pathways!
