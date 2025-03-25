@@ -71,3 +71,15 @@ console.error() // Returns to a log to the console as an error (Red highlight, m
 # 62. CHALLENGE #1
 
 - Given an array of forecasted maximum temps, the thermometer displays a string with these temps.
+
+# [25/03/2025] NOTES
+
+# 63. The Rise of AI Tools (ChatGPT, Copilot, CursorAI, etc.)
+
+- These tools should only be used by devs who already know what they're doing.
+- Workflow:
+	1. Make sure you understand the problem 
+	2. Give the AI a very specific prompt
+	3. Review and test the prompt given by AI, correct or improve the solution.
+
+# 64. Solving Challenge #2 with AI (Skipped)
