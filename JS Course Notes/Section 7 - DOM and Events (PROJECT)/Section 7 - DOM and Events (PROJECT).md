@@ -14,3 +14,18 @@
 	- e.g.`document.querySelector(#firstInput)`
 	- `.textContent()` - grabs the content.
 
+# 73. What is DOM and DOM Manipulation?
+
+- **DOM (Document Object Model)** - A structured Representation of HTML Documents. Allows Javascript to Access HTML Elements and Styles to manipulate them.
+- **DOM** is **NOT** a part of JS. It is actually a part of the WEB APIs. 
+- WEB APIs are automatically imported in JS. 
+- There is an official DOM specification used by all browsers.
+
+# 74. Selecting and Manipulating Elements
+
+- For input elements, when retrieving their value, you call `document.querySelector('.<your input class>').value`;
+
+
+# 75. Handling Click Events
+
+- 
