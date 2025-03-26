@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Section 6 - HTML & CSS Crash Course/Section 6 - HTML & CSS Crash Course.md",
+                "file": "Section 7 - DOM and Events (PROJECT)/Section 7 - DOM and Events (PROJECT).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Section 6 - HTML & CSS Crash Course"
+              "title": "Section 7 - DOM and Events (PROJECT)"
             }
           }
         ]
@@ -170,9 +170,11 @@
   },
   "active": "9f5536b6d0cc5871",
   "lastOpenFiles": [
+    "Section 6 - HTML & CSS Crash Course/Section 6 - HTML & CSS Crash Course.md",
+    "Section 7 - DOM and Events (PROJECT)/Section 7 - DOM and Events (PROJECT).md",
+    "Section 7 - DOM and Events (PROJECT)",
     "boxmodel.png",
     "Section 5 - Developer Skills & Editor Setup/Section 5 - Developer Skills & Editor Setup.md",
-    "Section 6 - HTML & CSS Crash Course/Section 6 - HTML & CSS Crash Course.md",
     "Section 6 - HTML & CSS Crash Course",
     "Section 4 - Course Pathways/Section 4 - Course Pathways.md",
     "Section 3 - Javascript Fundamentals Pt 2/JS Fundamentals Pt. 2 Notes.md",
