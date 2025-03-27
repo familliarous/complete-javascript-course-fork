@@ -29,13 +29,21 @@ document.querySelector('.check').addEventListener('click', function () {
     score++;
     document.querySelector('.score').textContent = score;
   } else if (guess > secretNumber) {
-    document.querySelector('.message').textContent = '📈 Number is too high!';
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📈 Number is too high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'Game Over! You lost.';
+    }
   } else if (guess < secretNumber) {
-    document.querySelector('.message').textContent = '📉 Number too low!';
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score > 1) {
+      document.querySelector('.message').textContent = '📈 Number is too high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'Game Over! You lost.';
+    }
   }
   console.log(document.querySelector('.guess').value);
 });
