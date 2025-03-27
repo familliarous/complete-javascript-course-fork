@@ -12,9 +12,22 @@
 
 // console.log(document.querySelector('.guess').value);
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+const defaultMessage = document.querySelector('.message').textContent;
+const defaultNumber = document.querySelector('.number').textContent;
+const defaultGuess = null;
+const defaultBodyColor = document.querySelector('body').style.backgroundColor;
 let score = 0;
+
 document.querySelector('.score').textContent = score;
+document.querySelector('.again').addEventListener('click', function () {
+  score = 0;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = defaultMessage;
+  document.querySelector('.number').textContent = defaultNumber;
+  document.querySelector('.guess').textContent = defaultGuess;
+  document.querySelector('body').style.backgroundColor = defaultBodyColor;
+});
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
