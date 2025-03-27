@@ -28,4 +28,5 @@
 
 # 75. Handling Click Events
 
+- Events - Something that happens on the page
 - 
