@@ -26,22 +26,27 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '⛔ NO NUMBER!';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉Correct Number!!!';
+    document.querySelector('body').style.backgroundColor = 'green';
     score++;
     document.querySelector('.score').textContent = score;
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Number is too high!';
       score--;
+      document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.score').textContent = score;
     } else {
+      document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.message').textContent = 'Game Over! You lost.';
     }
   } else if (guess < secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Number is too high!';
       score--;
+      document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.score').textContent = score;
     } else {
+      document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.message').textContent = 'Game Over! You lost.';
     }
   }

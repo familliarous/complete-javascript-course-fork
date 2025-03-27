@@ -35,4 +35,10 @@
 # 76. Implementing the Game Logic
 
 - the score variable is considered a "state" variable.
-- 
+
+# 77. Manipulating CSS Styles
+
+- Calling an DOM element's style:
+`document.querySelector('body').style.<style attribute here>`
+- two-word properties adapt the camelCase convention:
+`document.querySelector('body').style.backgroundColor = 'red'`
