@@ -13,6 +13,8 @@
 // console.log(document.querySelector('.guess').value);
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 0;
+document.querySelector('.score').textContent = score;
 
 document.querySelector('.number').textContent = secretNumber;
 
@@ -24,6 +26,16 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '⛔ NO NUMBER!';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉Correct Number!!!';
+    score++;
+    document.querySelector('.score').textContent = score;
+  } else if (guess > secretNumber) {
+    document.querySelector('.message').textContent = '📈 Number is too high!';
+    score--;
+    document.querySelector('.score').textContent = score;
+  } else if (guess < secretNumber) {
+    document.querySelector('.message').textContent = '📉 Number too low!';
+    score--;
+    document.querySelector('.score').textContent = score;
   }
   console.log(document.querySelector('.guess').value);
 });

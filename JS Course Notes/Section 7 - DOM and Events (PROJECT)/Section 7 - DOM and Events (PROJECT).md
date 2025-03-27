@@ -31,4 +31,8 @@
 - Events - Something that happens on the page
 - `.addEventListener()` takes the event as a string and a function expression.
 > **Note:** front end values are usually strings.
+
+# 76. Implementing the Game Logic
+
+- the score variable is considered a "state" variable.
 - 
