@@ -18,6 +18,7 @@ const defaultNumber = document.querySelector('.number').textContent;
 const defaultGuess = null;
 const defaultBodyColor = document.querySelector('body').style.backgroundColor;
 let score = 0;
+let highScore = 0;
 
 document.querySelector('.score').textContent = score;
 document.querySelector('.again').addEventListener('click', function () {
@@ -41,6 +42,11 @@ document.querySelector('.check').addEventListener('click', function () {
     score++;
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.score').textContent = score;
+
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = '📈 Number is too high!';

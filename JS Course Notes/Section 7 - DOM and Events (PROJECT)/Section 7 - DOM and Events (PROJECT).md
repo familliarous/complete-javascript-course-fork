@@ -4,7 +4,6 @@
 # 71. SECTION ROADMAP
 
 - Still chosing to learn it all!
-
 # 72. PROJECT #1: Guess My Number!
 
 - **Project Requirements:** You are to make a small Guess My Number app, where you guess the number. The app should let you know if the number you entered is higher or lower.
@@ -42,3 +41,9 @@
 `document.querySelector('body').style.<style attribute here>`
 - two-word properties adapt the camelCase convention:
 `document.querySelector('body').style.backgroundColor = 'red'`
+
+# [30/03/2025] NOTES
+
+# 79. Implementing the HighScores
+
+- High scores have been implemented in the JS script for the guess my number game.
