@@ -1,17 +1,5 @@
 'use strict';
 
-// console.log(document.querySelector('.message').textContent);
-
-// document.querySelector('.message').textContent = 'Correct Number! 🎉💃🎊';
-
-// document.querySelector('.number').textContent = 13;
-
-// document.querySelector('.score').textContent = 10;
-
-// document.querySelector('.guess').value = 23;
-
-// console.log(document.querySelector('.guess').value);
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 const defaultMessage = document.querySelector('.message').textContent;
 const defaultNumber = document.querySelector('.number').textContent;
@@ -19,6 +7,10 @@ const defaultGuess = null;
 const defaultBodyColor = document.querySelector('body').style.backgroundColor;
 let score = 0;
 let highScore = 0;
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 
 document.querySelector('.score').textContent = score;
 document.querySelector('.again').addEventListener('click', function () {
@@ -35,9 +27,12 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess, typeof guess);
 
   if (!guess) {
-    document.querySelector('.message').textContent = '⛔ NO NUMBER!';
+    // document.querySelector('.message').textContent = '⛔ NO NUMBER!';
+    displayMessage('⛔ NO NUMBER!');
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🎉Correct Number!!!';
+    // document.querySelector('.message').textContent = '🎉Correct Number!!!';
+    displayMessage('🎉Correct Number!!!');
+
     document.querySelector('body').style.backgroundColor = 'green';
     score++;
     document.querySelector('.number').textContent = secretNumber;
@@ -49,10 +44,12 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent =
+      displayMessage(
         guess > secretNumber
           ? '📈 Number is too high!'
-          : '📉 Number is too low!';
+          : '📉 Number is too low!'
+      );
+
       score--;
       document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.number').textContent = secretNumber;
