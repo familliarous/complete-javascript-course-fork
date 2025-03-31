@@ -54,3 +54,7 @@
 
 - DRY - Don't Repeat Yourself.
 - Refactoring the guessing game code!
+
+# 81. PROJECT # 2 Modal Window
+
+- Started Modal Window Project
