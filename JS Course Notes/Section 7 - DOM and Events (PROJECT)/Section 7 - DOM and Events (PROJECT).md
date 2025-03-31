@@ -47,3 +47,10 @@
 # 79. Implementing the HighScores
 
 - High scores have been implemented in the JS script for the guess my number game.
+
+# [31/03/2025] NOTES
+
+# 80. Refactoring Our Code: The DRY Principle
+
+- DRY - Don't Repeat Yourself.
+- Refactoring the guessing game code!

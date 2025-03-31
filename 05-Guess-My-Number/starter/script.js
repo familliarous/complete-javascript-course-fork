@@ -47,21 +47,12 @@ document.querySelector('.check').addEventListener('click', function () {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Number is too high!';
-      score--;
-      document.querySelector('body').style.backgroundColor = 'red';
-      document.querySelector('.number').textContent = secretNumber;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('body').style.backgroundColor = 'red';
-      document.querySelector('.number').textContent = secretNumber;
-      document.querySelector('.message').textContent = 'Game Over! You lost.';
-    }
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Number is too high!';
+      document.querySelector('.message').textContent =
+        guess > secretNumber
+          ? '📈 Number is too high!'
+          : '📉 Number is too low!';
       score--;
       document.querySelector('body').style.backgroundColor = 'red';
       document.querySelector('.number').textContent = secretNumber;
@@ -72,5 +63,4 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = 'Game Over! You lost.';
     }
   }
-  console.log(document.querySelector('.guess').value);
 });
