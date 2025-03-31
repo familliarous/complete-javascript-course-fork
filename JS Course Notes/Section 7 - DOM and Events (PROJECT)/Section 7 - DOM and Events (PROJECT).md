@@ -60,3 +60,10 @@
 - Started Modal Window Project
 
 # 82. Working with Classes
+
+- Classes can allow for the dynamic state switching in JS scripts.
+- For example, hiding an html element with a "hidden" class dynamically in JS would look like this:
+```
+const btnCloseModal = document.querySelector('.close-modal');
+btnCloseModal.addEventListener('click', closeModal);
+```
