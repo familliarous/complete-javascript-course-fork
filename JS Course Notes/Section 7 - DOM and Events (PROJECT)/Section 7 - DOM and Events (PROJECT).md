@@ -81,4 +81,4 @@ btnCloseModal.addEventListener('click', closeModal);
 
 # 84. PROJECT #3: The Pig Game
 
-- 
+- There is a way to exclusively call ID's in a document: `document.getElementById()`
