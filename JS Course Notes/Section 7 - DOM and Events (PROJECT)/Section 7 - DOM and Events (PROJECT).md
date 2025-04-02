@@ -82,3 +82,8 @@ btnCloseModal.addEventListener('click', closeModal);
 # 84. PROJECT #3: The Pig Game
 
 - There is a way to exclusively call ID's in a document: `document.getElementById()`
+	- You do not need to prepend a hash (#) when passing ids as a parameter for this.
+
+# 85. Rolling the Dice
+
+- 
