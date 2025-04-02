@@ -67,3 +67,15 @@
 const btnCloseModal = document.querySelector('.close-modal');
 btnCloseModal.addEventListener('click', closeModal);
 ```
+
+# [02/04/2025] NOTES
+
+# 82. Handling an "Esc" Keypress event
+
+- There are three keyboard events available:
+	- Key Up
+	- Key Down
+	- Key Pressed (Full Key action, event will keep firing upon pressing the key)
+- JS parameter function expression definitions will only be called upon event firing, and the event that triggered the function will be passed as the parameter.
+- How to access an element's class list:  `classList.contains` Sample: `modal.classList.contains('hidden')`
+- 
