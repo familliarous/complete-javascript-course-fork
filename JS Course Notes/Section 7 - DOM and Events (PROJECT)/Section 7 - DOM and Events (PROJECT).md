@@ -97,3 +97,6 @@ btnCloseModal.addEventListener('click', closeModal);
     player0El.classList.toggle('player--active');
     player1El.classList.toggle('player--active');
 ```
+
+# 87. Holding Currenty Score
+
