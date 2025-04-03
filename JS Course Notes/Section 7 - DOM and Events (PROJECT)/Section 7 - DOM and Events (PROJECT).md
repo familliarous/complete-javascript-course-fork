@@ -84,6 +84,16 @@ btnCloseModal.addEventListener('click', closeModal);
 - There is a way to exclusively call ID's in a document: `document.getElementById()`
 	- You do not need to prepend a hash (#) when passing ids as a parameter for this.
 
-# 85. Rolling the Dice
+# 86. Switching the Active Player
 
-- 
+- Implementing the code for player switch
+
+# [03/04/2025] NOTES
+
+- the  `.classlist.toggle()` function will allow for the element chosen to have the attribute class removed. 
+- For example:
+```
+// This toggles the active status between both of these elements.
+    player0El.classList.toggle('player--active');
+    player1El.classList.toggle('player--active');
+```
