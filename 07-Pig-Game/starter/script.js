@@ -28,6 +28,26 @@ const switchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
+const init = function () {
+  scores[0] = 0;
+  scores[1] = 0;
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--winner');
+  player1El.classList.remove('player--active');
+  player1El.classList.remove('player--winner');
+
+  score0El.textContent = '0';
+  score1El.textContent = '0';
+  current0El.textContent = '0';
+  current1El.textContent = '0';
+
+  diceEl.classList.add('hidden');
+};
+
 buttonHold.addEventListener('click', function () {
   if (playing) {
     // 1. Add current score to active player's score
@@ -71,3 +91,5 @@ buttonRoll.addEventListener('click', function () {
     }
   }
 });
+
+buttonNew.addEventListener('click', init);

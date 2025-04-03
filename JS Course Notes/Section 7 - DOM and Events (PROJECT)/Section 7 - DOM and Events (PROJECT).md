@@ -98,5 +98,9 @@ btnCloseModal.addEventListener('click', closeModal);
     player1El.classList.toggle('player--active');
 ```
 
-# 87. Holding Currenty Score
+# 87. Holding Current Score
 
+- Implemented adding the score to the player's count.
+# 88. Resetting the game 
+
+- Implemented resetting the game.
