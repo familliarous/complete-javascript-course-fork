@@ -32,3 +32,51 @@
 	- Parsing -> Compilation -> Execution
 - Global Window Object allows JS to access the WEB API's.
 - Callback Queue - contains all the callback functions that are ready to be executed (e.g. click(), timer(), etc.)
+
+# 93. Execution Contexts and the Call Stack
+
+- Execution context - An environment where a piece of JS is executed.
+	- JS code always runs in an execution context.
+- JS Execution sequence:
+	- Creation of global execution context -> Execution of top-level code -> Execution of functions and waiting for callbacks
+- Variable environment - contains all variables, let, const, and var declarations, as well as an arguments object
+- Scope chain and this keyword is included inside execution context
+- **Arrow functions DO NOT have a this keyword nor an arguments object!**
+
+# [07/04/2025] NOTES
+
+# 94. Scope And The Scope Chain
+
+-   Lexical Scoping - Scoping wherein the scope is controlled by the placement of functions and blocks in code
+- JS also has global and function scopes
+- Scoping asks the question "Where do variables live?" or "Where can we access a certain variable and where not?"
+- Only let and const variables are scoped 
+- The scope chain has nothing to do with the order in which functions are called.
+
+# 95. Scoping in Practice 
+
+- SKIPPED
+
+# 96. Variable Environment: Hoisting and The TDZ
+
+- Hoisting - Makes some types of variables accessible/usable in the code before actually being declared.
+	- Before exec, the code is scanned for var declarations, and for each var, a new property is created in the variable environment object.
+- Sample: 
+	- Function declarations are hoisted, with its initial value being the actual function
+	- var variables are also hoisted, with initial values being undefined if accessed before they are declared
+	- let or const vars are  called before declared are put in the **Temporal Dead Zone (TDZ)**, hence there will be errors.
+	- function expressions and arrows depend on if using var or const.
+
+# 97. Scoping in Practice
+
+- SKIPPED
+
+# [08/04/2025]
+
+# 98. Variable Environment: Hoisting and the TDZ
+
+- Temporal Deadzones - areas of code where a variable is called before its definition.
+
+# 99. Hoisting and TDZ in practice
+
+- Hoisting functions works for *function* declarations, but not for const variables or arrow functions.
