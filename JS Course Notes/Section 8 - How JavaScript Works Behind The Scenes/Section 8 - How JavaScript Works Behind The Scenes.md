@@ -79,4 +79,22 @@
 
 # 99. Hoisting and TDZ in practice
 
-- Hoisting functions works for *function* declarations, but not for const variables or arrow functions.
+- Hoisting functions works for *function* declarations, but not for const variables or arrow functions
+- When checking for truthy values, hoisting a function declaration in cooperation with var declarations can lead to bugs wherein the var value is used as a condition to run a hoisted function declaration. 
+- In the case where the var variable will return undefined once hoisted, it will return a falsy value, which will cause possible bugs done by pre-hoisting
+- **Variables declared with VAR will create a global property on the JS Window object.**
+
+# [13/04/2025] NOTES
+
+# 100. The the Keyword
+
+- The `this` keyword points to the execution context and points to the "owner" of the function which uses the `this` keyword.
+- **this is NOT static.** It is dependent on the how the function is called, and the value is assigned only when the function is called.
+- A simple function call in strict mode will allow a defined function to be called, but if not in strict mode, it will call a global Window variable matching the function name instead.
+- Arrow functions **do not get their own `this` keyword**! Arrow functions are made to pick up the context from the outer lexical scope (their parent calling function).
+- Event Listeners, when called `this` on, will call the DOM. It will not point to the function using it, nor the variable environment of the function.
+- Other ways to call (later on):
+	- new
+	- call
+	- apply
+	- bind
