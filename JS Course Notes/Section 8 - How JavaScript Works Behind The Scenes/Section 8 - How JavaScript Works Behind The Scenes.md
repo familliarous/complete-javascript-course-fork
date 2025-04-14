@@ -100,4 +100,8 @@
 	- bind
 - **NEVER use an arrow function as a method.**
 
-- Functions inside methods can also cause a `this` keyword pitfall. Regular function calls have the this keyword undefined,
+- Functions inside methods can also cause a `this` keyword pitfall. Regular function calls have the this keyword undefined, so it can cause errors.
+	- 2 Solutions to this:
+	- Using an external variable outside of the method to still retain the `this` value
+		- can use "that" or "self"
+	-  Using an arrow function.

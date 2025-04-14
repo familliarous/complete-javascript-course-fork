@@ -44,7 +44,7 @@ const jonas = {
     // console.log(this);
     console.log(2037 - this.year); // jonas value owns the this keyword
 
-    const isMillenial = function () {
+    const isMillenial = () => {
       console.log(this);
       console.log(this.year >= 1981 && this.year <= 1996);
     };
