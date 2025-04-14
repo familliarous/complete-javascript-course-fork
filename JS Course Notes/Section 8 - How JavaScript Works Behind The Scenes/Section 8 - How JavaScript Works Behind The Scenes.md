@@ -98,3 +98,6 @@
 	- call
 	- apply
 	- bind
+- **NEVER use an arrow function as a method.**
+
+- Functions inside methods can also cause a `this` keyword pitfall. Regular function calls have the this keyword undefined,
