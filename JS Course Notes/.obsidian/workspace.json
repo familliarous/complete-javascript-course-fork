@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Section 8 - How JavaScript Works Behind The Scenes/Section 8 - How JavaScript Works Behind The Scenes.md",
+                "file": "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Section 8 - How JavaScript Works Behind The Scenes"
+              "title": "Section 9 - Data Structures, Modern Operators and Strings"
             }
           }
         ],
@@ -185,9 +185,11 @@
   },
   "active": "91a876809067e3cd",
   "lastOpenFiles": [
+    "Section 8 - How JavaScript Works Behind The Scenes/Section 8 - How JavaScript Works Behind The Scenes.md",
+    "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
+    "Section 9 - Data Structures, Modern Operators and Strings",
     "boxmodel.png",
     "Section 7 - DOM and Events (PROJECT)/Section 7 - DOM and Events (PROJECT).md",
-    "Section 8 - How JavaScript Works Behind The Scenes/Section 8 - How JavaScript Works Behind The Scenes.md",
     "Section 8 - How JavaScript Works Behind The Scenes",
     "Section 3 - Javascript Fundamentals Pt 2/JS Fundamentals Pt. 2 Notes.md",
     "Section 6 - HTML & CSS Crash Course/Section 6 - HTML & CSS Crash Course.md",
@@ -207,7 +209,6 @@
     "Section 1 - Welcome/Course Information.md",
     "Section 2 - Javascript Fundamentals Pt 1/Untitled",
     "Section 2 - Javascript Fundamentals Pt 1",
-    "Welcome.md",
-    "Section 1 - Welcome"
+    "Welcome.md"
   ]
 }

@@ -105,3 +105,71 @@
 	- Using an external variable outside of the method to still retain the `this` value
 		- can use "that" or "self"
 	-  Using an arrow function.
+
+# [14/04/2025] NOTES
+
+# 103. Memory Management: Primitives vs. Objects
+
+- Memory is automatically managed in JS behind the scenes.
+- Lifecycle:
+	- 1. Allocate Memory (When defining a variable)
+	- 2. Use memory (When accessing the variable)
+	- 3. Release memory (When variable is no longer being used)
+- Non-primitive data types are considered as Objects (Object literals, Arrays, Functions, etc.)
+- References to Objects
+	- The memory address of objects are stored in the call stack. The objects themselves are in the heap.
+- A shallow copy is just copying the reference to an object, while a deep copy copies the ENTIRE object and its contents. Shallow copies will modify the original's value if mutated.
+
+# [21/04/2025] NOTES
+
+# 104. Object References in Practice (Shallow vs. Deep Copies)
+
+- Creating a Deep copy:
+
+```
+const jessica = {
+
+  firstName: 'Jessica',
+
+  lastName: 'Williams',
+
+  age: 27,
+
+  family: ['Alice', 'Bob'],
+
+};
+
+  
+
+const jessicaCopy = { ...jessica }; // Spread operator
+```
+
+- If an object has another object nested inside, then only the reference to that object is copied.
+- Structured Clone function works well for this:
+```
+const jessicaClone = structuredClone(jessica);
+
+  
+
+jessicaClone.family.push('Mary');
+
+jessicaClone.family.push('John');
+
+  
+
+console.log('Before:', jessica);
+
+console.log('After:', jessicaClone); // <--- only the reference to family array object is being copied. The family object is a shallow copy.
+```
+
+# 105. Memory Management: Garbage Collection
+
+- Step by step of garbage coll:
+	- Allocate Memory -> Use Memory -> Release Memory
+- GC is used in the heap memory
+- It makes use of the Mark-And-Sweep algorithm.
+	- Mark: mark all objects reachable from root as "Alive"
+	- Sweep: Delete unmarked/unreachable objects and reclaim memory
+- Memory Leaks -> When objects that are no longer needed are incorrectly still reachable and not being garbage collected.
+	- Avoid declaring large objects as global objects! They will cause a memory leak.
+- 

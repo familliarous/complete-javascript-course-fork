@@ -65,4 +65,37 @@ jonas.calcAge();
 
 // matilda.calcAge = jonas.calcAge; // Method Borrowing, copying an existing defined method
 
-jonas.calcAge();
+// Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+addExpr(2, 5);
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+const jessicaCopy = { ...jessica }; // ... is the Spread operator.
+
+jessicaCopy.lastName = 'Davis';
+
+console.log(jessica, jessicaCopy);
+
+// jessicaCopy.family.push('Mary');
+// jessicaCopy.family.push('John');
+
+// console.log('Before:', jessica);
+// console.log('After:', jessicaCopy); // <--- only the reference to family array object is being copied. The family object is a shallow copy.
+
+const jessicaClone = structuredClone(jessica);
+
+jessicaClone.family.push('Mary');
+jessicaClone.family.push('John');
+
+console.log('Before:', jessica);
+console.log('After:', jessicaClone); // <--- only the reference to family array object is being copied. The family object is a shallow copy.
