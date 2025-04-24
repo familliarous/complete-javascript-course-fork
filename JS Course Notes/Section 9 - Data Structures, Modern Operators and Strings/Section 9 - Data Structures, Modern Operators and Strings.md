@@ -40,4 +40,26 @@ console.log(p, q, r); // 8, 9, 1
 
 # 110. Destructuring Objects
 
-- 
+- object order doesn't matter so when destructuring entire objects, you don't need to skip over:
+```
+const { name, openingHours, categories } = restaurant; // <- this is valid
+console.log(name, openingHours, categories); // Classico Italiano
+
+Object { thu: {…}, fri: {…}, sat: {…} }
+fri: Object { open: 11, close: 23 }
+
+
+sat: Object { open: 0, close: 24 }
+
+
+thu: Object { open: 12, close: 22 }
+
+
+<prototype>: Object { … }
+
+Array(4) [ "Italian", "Pizzeria", "Vegetarian", "Organic" ]
+```
+
+
+
+

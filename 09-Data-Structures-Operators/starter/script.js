@@ -48,29 +48,84 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  // Basically just pass the parameters in reverse by calling this function:
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
 
-const arr = [2, 3, 4];
+// Object destructuring
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
-const [x, y, z] = arr; // <-- Destructuring  Assignment
+// Object destructuring with default values
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 1,
+});
 
-console.log(x, y, z);
+// const arr = [2, 3, 4];
 
-const [first, second] = restaurant.categories;
-console.log(first, second);
+// const [x, y, z] = arr; // <-- Destructuring  Assignment
 
-const [first1, , second1] = restaurant.categories; // <-- if you want to grab or skip an element, literally just skip the element
-console.log(first1, second1);
+// console.log(x, y, z);
 
-const [starter, main] = restaurant.order(2, 0);
-console.log(starter, main, '<-- Order function');
+// const [first, second] = restaurant.categories;
+// console.log(first, second);
 
-const nested = [2, 4, [5, 6]];
-const [i, , j] = nested;
-console.log(i, j);
+// const [first1, , second1] = restaurant.categories; // <-- if you want to grab or skip an element, literally just skip the element
+// console.log(first1, second1);
 
-const [l, , [m, n]] = nested;
-console.log(l, m, n);
+// const [starter, main] = restaurant.order(2, 0);
+// console.log(starter, main, '<-- Order function');
 
-const [p = 3, q = 2, r = 1] = [8, 9];
-console.log(p, q, r);
+// const nested = [2, 4, [5, 6]];
+// const [i, , j] = nested;
+// console.log(i, j);
+
+// const [l, , [m, n]] = nested;
+// console.log(l, m, n);
+
+// const [p = 3, q = 2, r = 1] = [8, 9];
+// console.log(p, q, r);
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+
+console.log(restaurantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj); // This expression needs to be in a parenthesis due to it starting with curly brace, which JS expects a function block from
+console.log(a, b);
+
+// nested objects
+
+const {
+  fri: { open: o, close: c },
+} = openingHours; // Destructured openingHours object into opening and closing hours variables for friday
+
+console.log(o, c);
