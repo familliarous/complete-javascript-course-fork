@@ -60,6 +60,10 @@ const restaurant = {
       `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1} ${ing2} ${ing3}`);
+  },
 };
 
 // Object destructuring
@@ -129,3 +133,41 @@ const {
 } = openingHours; // Destructured openingHours object into opening and closing hours variables for friday
 
 console.log(o, c);
+
+console.log(
+  '========================= SPREAD OPERATOR ========================='
+);
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+// use the spread operator to spread the contents of the arr array out
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+
+const mainMenuCopy = { ...restaurant.mainMenu };
+
+const newMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(newMenu);
+
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+console.log(...str);
+console.log('j', 'o');
+// console.log(`${...str} Schmedtmann`); <-- Does not work, spread only used when expecting to pass multiple values separated by comma.
+
+const ingredients = [
+  // prompt("Let's make pasta! Ingredient 1?"),
+  // prompt("Let's make pasta! Ingredient 2?"),
+  // prompt("Let's make pasta! Ingredient 3?"),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);

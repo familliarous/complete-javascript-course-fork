@@ -66,3 +66,45 @@ Array(4) [ "Italian", "Pizzeria", "Vegetarian", "Organic" ]
 # 111. The Spread Operator
 
 
+```
+const arr = [7, 8, 9];
+
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+
+console.log(newArr);
+```
+
+- In the upper syntax, the spread operator spreads the arr array out into individual elements.
+
+```
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+```
+
+- ^^ This will only add more elements to the newMenu array and it does not modify anything.
+- The spread operator does not create new variables and only takes an array's contents.
+
+- Making shallow and deep copies out of  the spread operator is one of its use cases
+- Shallow Copy:
+```
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+```
+- Deep Copy: 
+
+
+- **Iterables**
+	- Arrays
+	- Strings
+	- Maps
+	- Sets
+	- **NOT OBJECTS!**
+```
+console.log(`${...str} Schmedtmann`);
+```
+
+- ^^Does not expect multiple values separated by a comma, so does not work
+
+- ES 2018 - Objects can now use the spread operator despite not being an iterable
