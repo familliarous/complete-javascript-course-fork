@@ -64,6 +64,11 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1} ${ing2} ${ing3}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 // Object destructuring
@@ -184,3 +189,29 @@ const [pizza, , risotto, ...otherFood] = [
   ...restaurant.starterMenu,
 ];
 console.log(pizza, risotto, otherFood);
+
+// Objects and rest pattern
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 1. Objects
+
+// 2. Functions
+
+const add = function (...numbers) {
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+
+  console.log(sum);
+};
+add(1, 2, 3, 4, 5, 6, 7, 4, 3, 234);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+
+restaurant.orderPizza('mushrooms');

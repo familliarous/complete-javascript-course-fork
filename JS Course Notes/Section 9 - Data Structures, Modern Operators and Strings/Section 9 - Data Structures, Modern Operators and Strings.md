@@ -119,3 +119,13 @@ console.log(`${...str} Schmedtmann`);
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 // ...others is the REST pattern = packs 3,4,5 in the array others.
 ```
+
+- There should only ever be one REST pattern in any destructuring assignment.
+
+- Takeaways:
+	- Spread is used when writing values separated by commas
+	- Rest is used when writing variable names separated by commas
+
+# 113. Short Circuiting (&& and ||)
+
+- 
