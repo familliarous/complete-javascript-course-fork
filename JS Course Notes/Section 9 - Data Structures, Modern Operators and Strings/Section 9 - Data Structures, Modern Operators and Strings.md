@@ -108,3 +108,14 @@ console.log(`${...str} Schmedtmann`);
 - ^^Does not expect multiple values separated by a comma, so does not work
 
 - ES 2018 - Objects can now use the spread operator despite not being an iterable
+
+# [28/04/2025] NOTES
+
+# 112. Rest Pattern and Parameters
+
+- spread operator is for unpacking arrays/objects, while REST pattern is for packing.
+- Rest pattern example:
+```
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+// ...others is the REST pattern = packs 3,4,5 in the array others.
+```

@@ -119,12 +119,12 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
-let a = 111;
-let b = 999;
+// let a = 111;
+// let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = obj); // This expression needs to be in a parenthesis due to it starting with curly brace, which JS expects a function block from
-console.log(a, b);
+// ({ a, b } = obj); // This expression needs to be in a parenthesis due to it starting with curly brace, which JS expects a function block from
+// console.log(a, b);
 
 // nested objects
 
@@ -171,3 +171,16 @@ restaurant.orderPasta(...ingredients);
 
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 console.log(newRestaurant);
+
+console.log('=========== REST PATTERN ===========');
+
+const arrRest = [1, 2, ...[3, 4]];
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
