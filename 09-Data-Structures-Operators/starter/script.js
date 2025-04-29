@@ -215,3 +215,48 @@ add(...x);
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
 restaurant.orderPizza('mushrooms');
+
+console.log('======== SHORT CIRCUITING =============');
+
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(undefined || null);
+console.log(true || 0);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// restaurant.numGuests = 0;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('---- AND ----');
+
+// Falsy value - short circuits to 0
+console.log(0 && 'Jonas');
+// Truthy value - does not short circuit, shows Jonas
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+// If the orderPizza function exists in restaurant, it will not short circuit.
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+console.log('=========== Nullish Coalescing Operator ========');
+
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests ? restaurant.numGuests : 10;
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+console.log('=========== Logical Assignment Operators ==============');

@@ -128,4 +128,26 @@ const [a, b, ...others] = [1, 2, 3, 4, 5];
 
 # 113. Short Circuiting (&& and ||)
 
+- logical operators can use any data type
+	- can also return any datatype
+	- can also do SHORT CIRCUITING
+
+- Short circuting - if 1st value is a truthy value, it will return that value without checking the 2nd.
+```
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Returns Hello because it's the first "truthy" value
+```
+
+- AND Operator - Shortcuts when first value is FALSY
+- OR Operator - Shortcuts when first value is TRUTHY
+
+# [29/04/2025] NOTES
+
+# 114. Nullish Coalescing Operator (??)
+
+- ES2020 released
+- Works with "Nullish" values (`null` or `undefined`) 
+- Will only short circuit nullish values, same behavior as && but fixes an issue with &&'s short circuiting
+
+# 115. Logical Assignment Operators
+
 - 
