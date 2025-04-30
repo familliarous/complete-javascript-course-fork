@@ -150,4 +150,6 @@ console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Returns Hello bec
 
 # 115. Logical Assignment Operators
 
-- 
+- ||= - OR Assignment operator. Assigns a value to a variable if variable is currently falsy.
+- ??= - Nullish Assignment Operator.  If var is nullish, it gets assigned.
+- &&= - AND assignment operator. Assign a value to var if currently truthy. Otherwise it stays the same. Short circuits at the first sign of a truthy value.

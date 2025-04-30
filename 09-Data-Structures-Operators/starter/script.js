@@ -260,3 +260,33 @@ const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
 console.log('=========== Logical Assignment Operators ==============');
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// OR Assignment operator
+// rest1.numberGuests = rest1.numGuests || 10;
+// rest2.numberGuests = rest1.numGuests || 10;
+
+// rest1.numGuests ||= 10; // If assigned 0, since this is falsy instead of nullish the operator will still run
+// rest2.numGuests ||= 10;
+
+// nullish assignment operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+
+rest1.owner &&= 'ANONYMOUS'; // Assign a value to var if currently truthy. Otherwise it stays the same
+rest2.owner &&= 'ANONYMOUS';
+
+console.log(rest1);
+console.log(rest2);
