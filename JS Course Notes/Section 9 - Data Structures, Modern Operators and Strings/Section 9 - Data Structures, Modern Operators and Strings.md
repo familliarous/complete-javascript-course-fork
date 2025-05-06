@@ -153,3 +153,101 @@ console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Returns Hello bec
 - ||= - OR Assignment operator. Assigns a value to a variable if variable is currently falsy.
 - ??= - Nullish Assignment Operator.  If var is nullish, it gets assigned.
 - &&= - AND assignment operator. Assign a value to var if currently truthy. Otherwise it stays the same. Short circuits at the first sign of a truthy value.
+
+# [06/05/2025] NOTES
+# 116. CHALLENGE #1
+
+- Nested Destructuring:
+```
+  const game = {
+
+  team1: "Bayern Munich",
+
+  team2: "Borrussia Dortmund",
+
+  players: [
+
+    [
+
+      "Neuer",
+
+      "Pavard",
+
+      "Martinez",
+
+      "Alaba",
+
+      "Davies",
+
+      "Kimmich",
+
+      "Goretzka",
+
+      "Coman",
+
+      "Muller",
+
+      "Gnarby",
+
+      "Lewandowski",
+
+    ],
+
+    [
+
+      "Burki",
+
+      "Schulz",
+
+      "Hummels",
+
+      "Akanji",
+
+      "Hakimi",
+
+      "Weigl",
+
+      "Witsel",
+
+      "Hazard",
+
+      "Brandt",
+
+      "Sancho",
+
+      "Gotze",
+
+    ],
+
+  ],
+
+  score: "4:0",
+
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+
+  date: "Nov 9th, 2037",
+
+  odds: {
+
+    team1: 1.33,
+
+    x: 3.25,
+
+    team2: 6.5,
+
+  },
+
+};
+
+
+const {
+
+  odds: { team1, x: draw, team2 },
+
+} = game; // This will result in the variables team1, draw, and team2 being filled with the values of the variables of the same names inside the game array.
+
+
+  
+
+console.log(odds.team1);
+```
