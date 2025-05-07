@@ -290,3 +290,14 @@ rest2.owner &&= 'ANONYMOUS';
 
 console.log(rest1);
 console.log(rest2);
+
+const forLoopMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of forLoopMenu) console.log(item);
+
+// Using destructuring in for of loop
+for (const [i, el] of forLoopMenu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+console.log(...forLoopMenu.entries());

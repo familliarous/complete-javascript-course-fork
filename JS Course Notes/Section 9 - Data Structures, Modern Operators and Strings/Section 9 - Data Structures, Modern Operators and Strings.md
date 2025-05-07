@@ -251,3 +251,12 @@ const {
 
 console.log(odds.team1);
 ```
+
+# 117. Looping Arrays: The for-of Loop
+
+- Syntax:
+```
+for (const item of forLoopMenu) console.log(item);
+```
+- Similar to a for each loop, just replace **in** or **:** with **of**  
+- 
