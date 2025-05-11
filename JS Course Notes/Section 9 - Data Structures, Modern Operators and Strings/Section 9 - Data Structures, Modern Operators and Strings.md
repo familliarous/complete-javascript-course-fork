@@ -259,4 +259,20 @@ console.log(odds.team1);
 for (const item of forLoopMenu) console.log(item);
 ```
 - Similar to a for each loop, just replace **in** or **:** with **of**  
-- 
+
+
+# 118. Enhanced Object Literals
+
+- Syntax:
+
+```
+// ES6 Enhanced Object Literals
+// If you declare a variableoutside an object literal, and you want to include that variable inside, you don't have to assign it anymore:
+
+const test = 1;
+
+const testEnhanced = {
+	name: 1,
+	test // This is inferred alreadyye
+}
+```
