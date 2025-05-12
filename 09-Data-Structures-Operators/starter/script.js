@@ -298,3 +298,32 @@ for (const [i, el] of forLoopMenu.entries()) {
 }
 
 console.log(...forLoopMenu.entries());
+
+// 119. Optional Chaining (.?)
+
+// console.log(restaurant.openingHours.mon.open);
+
+// ES2020 OPTIONAL CHAINING .?
+
+console.log(restaurant.openingHours.mon?.open); // only if mon exists, that's when open will be accessed. Otherwise, return undefined.
+
+const days = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed'; //use variable name as the property name; Using nullish coalescing operator and optional chaining
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Optional Chaining for Methods
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Optional Chaining for Arrays
+
+const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+const users2 = [];
+
+console.log(users[0]?.name ?? 'User array empty'); // Users has an element in index 0, so it displays the name
+
+console.log(users2[0]?.name ?? 'User array empty'); // Users2 is empty so it outputs user array empty.

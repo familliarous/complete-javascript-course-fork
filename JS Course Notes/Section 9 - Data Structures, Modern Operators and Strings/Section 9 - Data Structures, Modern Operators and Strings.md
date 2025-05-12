@@ -276,3 +276,37 @@ const testEnhanced = {
 	test // This is inferred alreadyye
 }
 ```
+
+
+# [11/05/2025] NOTES
+
+# 119. Optional Chaining
+
+- Optional Chaining (.?) can prevent errors stemming from undefined properties being accessed by returning undefined if the property before the ? in the chain returns undefined.
+- Syntax:
+```
+console.log(restaurant.openingHours.mon?.open); // only if mon exists, that's when open will be accessed. Otherwise, return undefined.
+```
+
+- Can also be used in Methods  and Arrays:
+
+```
+// Optional Chaining for Methods
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Optional Chaining for Arrays
+
+const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+
+const users2 = [];
+
+console.log(users[0]?.name ?? 'User array empty'); // Users has an element in index 0, so it displays the name
+
+console.log(users2[0]?.name ?? 'User array empty'); // Users2 is empty so it outputs user array empty.
+```
+
+
+
