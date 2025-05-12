@@ -1,36 +1,36 @@
-'use strict';
+"use strict";
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 // Data needed for a later exercise
 const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 const italianFoods = new Set([
-  'pasta',
-  'gnocchi',
-  'tomatoes',
-  'olive oil',
-  'garlic',
-  'basil',
+  "pasta",
+  "gnocchi",
+  "tomatoes",
+  "olive oil",
+  "garlic",
+  "basil",
 ]);
 
 const mexicanFoods = new Set([
-  'tortillas',
-  'beans',
-  'rice',
-  'tomatoes',
-  'avocado',
-  'garlic',
+  "tortillas",
+  "beans",
+  "rice",
+  "tomatoes",
+  "avocado",
+  "garlic",
 ]);
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
 
   openingHours: {
     [weekdays[3]]: {
@@ -52,9 +52,9 @@ const restaurant = {
   },
 
   // Basically just pass the parameters in reverse by calling this function:
-  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+  orderDelivery({ starterIndex = 1, mainIndex = 0, time = "20:00", address }) {
     console.log(
-      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     );
   },
 
@@ -70,15 +70,15 @@ const restaurant = {
 
 // Object destructuring
 restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
+  time: "22:30",
+  address: "Via del Sole, 21",
   mainIndex: 2,
   starterIndex: 2,
 });
 
 // Object destructuring with default values
 restaurant.orderDelivery({
-  address: 'Via del Sole, 21',
+  address: "Via del Sole, 21",
   starterIndex: 1,
 });
 
@@ -137,7 +137,7 @@ const {
 console.log(o, c);
 
 console.log(
-  '========================= SPREAD OPERATOR ========================='
+  "========================= SPREAD OPERATOR =========================",
 );
 
 const arr = [7, 8, 9];
@@ -155,11 +155,11 @@ const mainMenuCopy = { ...restaurant.mainMenu };
 const newMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(newMenu);
 
-const str = 'Jonas';
-const letters = [...str, '', 'S.'];
+const str = "Jonas";
+const letters = [...str, "", "S."];
 console.log(letters);
 console.log(...str);
-console.log('j', 'o');
+console.log("j", "o");
 // console.log(`${...str} Schmedtmann`); <-- Does not work, spread only used when expecting to pass multiple values separated by comma.
 
 const ingredients = [
@@ -171,10 +171,10 @@ console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
 
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guiseppe" };
 console.log(newRestaurant);
 
-console.log('=========== REST PATTERN ===========');
+console.log("=========== REST PATTERN ===========");
 
 const arrRest = [1, 2, ...[3, 4]];
 const [a, b, ...others] = [1, 2, 3, 4, 5];
@@ -209,18 +209,18 @@ add(1, 2, 3, 4, 5, 6, 7, 4, 3, 234);
 const x = [23, 5, 7];
 add(...x);
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
 
-restaurant.orderPizza('mushrooms');
+restaurant.orderPizza("mushrooms");
 
-console.log('======== SHORT CIRCUITING =============');
+console.log("======== SHORT CIRCUITING =============");
 
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
 console.log(undefined || null);
 console.log(true || 0);
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
 
 // const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 // console.log(guests1);
@@ -232,23 +232,23 @@ console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
-console.log('---- AND ----');
+console.log("---- AND ----");
 
 // Falsy value - short circuits to 0
-console.log(0 && 'Jonas');
+console.log(0 && "Jonas");
 // Truthy value - does not short circuit, shows Jonas
-console.log(7 && 'Jonas');
+console.log(7 && "Jonas");
 
-console.log('Hello' && 23 && null && 'jonas');
+console.log("Hello" && 23 && null && "jonas");
 
 if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
+  restaurant.orderPizza("mushrooms", "spinach");
 }
 
 // If the orderPizza function exists in restaurant, it will not short circuit.
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 
-console.log('=========== Nullish Coalescing Operator ========');
+console.log("=========== Nullish Coalescing Operator ========");
 
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -256,16 +256,16 @@ const guests = restaurant.numGuests ? restaurant.numGuests : 10;
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
-console.log('=========== Logical Assignment Operators ==============');
+console.log("=========== Logical Assignment Operators ==============");
 
 const rest1 = {
-  name: 'Capri',
+  name: "Capri",
   numGuests: 0,
 };
 
 const rest2 = {
-  name: 'La Piazza',
-  owner: 'Giovanni Rossi',
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
 };
 
 // OR Assignment operator
@@ -282,8 +282,8 @@ rest2.numGuests ??= 10;
 // rest1.owner = rest1.owner && '<ANONYMOUS>';
 // rest2.owner = rest2.owner && '<ANONYMOUS>';
 
-rest1.owner &&= 'ANONYMOUS'; // Assign a value to var if currently truthy. Otherwise it stays the same
-rest2.owner &&= 'ANONYMOUS';
+rest1.owner &&= "ANONYMOUS"; // Assign a value to var if currently truthy. Otherwise it stays the same
+rest2.owner &&= "ANONYMOUS";
 
 console.log(rest1);
 console.log(rest2);
@@ -307,23 +307,44 @@ console.log(...forLoopMenu.entries());
 
 console.log(restaurant.openingHours.mon?.open); // only if mon exists, that's when open will be accessed. Otherwise, return undefined.
 
-const days = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat', 'sun'];
+const days = ["mon", "tues", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
   console.log(day);
-  const open = restaurant.openingHours[day]?.open ?? 'closed'; //use variable name as the property name; Using nullish coalescing operator and optional chaining
+  const open = restaurant.openingHours[day]?.open ?? "closed"; //use variable name as the property name; Using nullish coalescing operator and optional chaining
   console.log(`On ${day}, we open at ${open}`);
 }
 
 // Optional Chaining for Methods
 
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
 
 // Optional Chaining for Arrays
 
-const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+const users = [{ name: "Jonas", email: "hello@jonas.io" }];
 const users2 = [];
 
-console.log(users[0]?.name ?? 'User array empty'); // Users has an element in index 0, so it displays the name
+console.log(users[0]?.name ?? "User array empty"); // Users has an element in index 0, so it displays the name
 
-console.log(users2[0]?.name ?? 'User array empty'); // Users2 is empty so it outputs user array empty.
+console.log(users2[0]?.name ?? "User array empty"); // Users2 is empty so it outputs user array empty.
+
+// Property NAMES
+const properties = Object.keys(openingHours);
+
+console.log(`We are open on ${properties.length} days: `);
+
+for (const day of properties) {
+  console.log(day);
+}
+
+// Property VALUES
+
+const values = Object.values(openingHours);
+console.log(values);
+
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
