@@ -309,4 +309,7 @@ console.log(users2[0]?.name ?? 'User array empty'); // Users2 is empty so it out
 ```
 
 
+# [13/05/2025] NOTES
+
+# Challenge # 2: Continuing the football betting app
 
