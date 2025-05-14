@@ -411,4 +411,52 @@ for (const [key, value] of question) {
 
 # 126. Summary: Which Data Structure to use?
 
-- 
+### Sources of Data
+
+1. From the Program itself: Data written directly in source code
+2. From the UI: Data input from the user or data written in DOM (tasks in todo app)
+3. From external sources: Data fetched for example from web API (e.g. recipe objects)
+
+### Other Built-in Datatypes for JS:
+
+- WeakMap
+- WeakSet
+
+### Non-built-in:
+
+- Stacks
+- Queues
+- Linked Lists
+- Trees
+- Hash Tables
+### Decision : Do you need a simple list of values?
+
+1. Simple list: **Arrays or Sets**
+2. Key/Value Pairs: **Objects or Maps**
+
+# Key Differences
+
+### Arrays
+
+- Use when you need ordered list of values (might contain duplicates)
+- Use when you need to **MANIPULATE** data
+
+### Sets
+
+- Use when you need to work with unique values
+- Use when high-performance is *really* important
+- use to remove duplicates from arrays
+
+### Objects 
+
+- More "traditional" key/value stores ("abused" objects)
+- Easier to write and access values with . and []
+
+### Maps
+
+- Better performance over objects
+- Keys can have ANY data type
+- easier to iterate
+- easier to compute its size
+- Use when you simply need to map keys to values
+- use when you need keys that are **not** strings
