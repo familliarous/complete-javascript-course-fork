@@ -313,3 +313,44 @@ console.log(users2[0]?.name ?? 'User array empty'); // Users2 is empty so it out
 
 # Challenge # 2: Continuing the football betting app
 
+- Complete.
+- ALWAYS initialize your values
+
+# 122. Sets
+
+- Sets are an order of values
+- Syntax:
+```
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto','Pasta','Pizza'])
+```
+- Sets are also iterables
+	- its elements are unique
+	- order is irrelevant
+- Strings ARE ITERABLES
+```
+const stringSet = new Set('Test') // outs 'T' 'e' 's' 't'
+```
+
+- Sets have NO INDEXES. There is no point of retrieving values in a set
+- since sets are iterables you may use for of loops.
+- Cool trick: Creating a new set from an array THEN turning that set into an array:
+```
+const setStaff = [...new Set(staff)]; // Destructures the Set into a new array
+```
+
+- Sets are NOT intended to replace arrays.
+- It is only intended to use for unique sets of values.
+ 
+# [14/05/2025] NOTES
+
+# 123. New Operations to Make Sets Useful!
+
+- Intersection - ONLY items that both sets have 
+- Union - ALL items that either set has
+- Difference - ONLY items unique to the calling set (mexicanFoods.difference(italianFoods) <- Mexican Foods is the calling set)
+- Symmetric Difference - ONLY items unique to either sets (excludes items that both sets have)
+- Is Disjoint From - Checks if sets are completely different.
+
+# 124. Maps
+
+- 

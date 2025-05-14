@@ -54,7 +54,7 @@ const restaurant = {
   // Basically just pass the parameters in reverse by calling this function:
   orderDelivery({ starterIndex = 1, mainIndex = 0, time = "20:00", address }) {
     console.log(
-      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
@@ -137,7 +137,7 @@ const {
 console.log(o, c);
 
 console.log(
-  "========================= SPREAD OPERATOR =========================",
+  "========================= SPREAD OPERATOR ========================="
 );
 
 const arr = [7, 8, 9];
@@ -348,3 +348,57 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+
+// 122. Sets
+const ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(ordersSet);
+
+console.log(new Set("Test"));
+
+console.log(ordersSet.has("Pizza"));
+console.log(ordersSet.has("Bread"));
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+ordersSet.delete("Risotto");
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+// Example
+
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+const setStaff = [...new Set(staff)];
+console.log(setStaff);
+
+// 123. New Operations to Make Sets Useful
+
+const commonFoods = italianFoods.intersection(mexicanFoods);
+
+console.log("Intersection: ", commonFoods);
+console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods); //Needs ES2025
+console.log("Union: ", italianMexicanFusion);
+console.log(new Set([...italianFoods, ...mexicanFoods]));
+
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+
+console.log("Difference Italian: ", uniqueItalianFoods);
+
+const uniqueMexicanFoods = mexicanFoods.difference(italianFoods);
+console.log("Difference mexican: ", uniqueMexicanFoods);
+
+const uniqueItalianAndMexicanFoods =
+  italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianAndMexicanFoods);
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
+// 124. Maps
