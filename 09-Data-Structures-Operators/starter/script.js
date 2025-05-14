@@ -437,3 +437,41 @@ console.log(rest);
 console.log(rest.size);
 
 console.log(rest.get([1, 2])); // this [1,2] Is different because it is from a different reference.
+
+// 125. Maps: Iteration
+
+const question = new Map([
+  ["question", "What is the best programming language in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct :)"],
+  [false, "Try again!"],
+]);
+
+console.log(question);
+
+// convert object to map
+
+const hoursMap = new Map(Object.entries(openingHours)); // Use this to convert array of arrays into map
+console.log(hoursMap);
+
+// Maps are iterables
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt("Your answer: "));
+
+// My answer...
+// console.log(
+//   answer == question.get("correct") ? question.get(true) : question.get(false)
+// );
+
+console.log(question.get(question.get("correct") === answer));
+
+// Convert map to array
+
+console.log([...question]);

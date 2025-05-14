@@ -377,3 +377,38 @@ rest
 
   .set(false, "We are closed");
 ```
+
+# 125. Maps: Iteration
+
+- Since Maps are iterables, You can use iterable functionality on them:
+```
+const question = new Map([
+
+  ["question", "What is the best programming language in the world?"],
+
+  [1, "C"],
+
+  [2, "Java"],
+
+  [3, "JavaScript"],
+
+  ["correct", 3],
+
+  [true, "Correct :)"],
+
+  [false, "Try again!"],
+
+]);
+
+console.log(question.get("question"));
+
+for (const [key, value] of question) {
+
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+
+}
+```
+
+# 126. Summary: Which Data Structure to use?
+
+- 
