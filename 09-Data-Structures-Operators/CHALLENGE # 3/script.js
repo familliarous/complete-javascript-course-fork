@@ -6,7 +6,6 @@ Let's continue with our football betting app! This time, we have a map with a lo
 3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
 4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
       [FIRST HALF] 17: ⚽️ GOAL
-
 GOOD LUCK 😀
 */
 
@@ -23,3 +22,25 @@ const gameEvents = new Map([
   [80, "⚽️ GOAL"],
   [92, "🔶 Yellow card"],
 ]);
+
+// 1.
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// 2.
+console.log(gameEvents);
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// 3.
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size} minutes`
+);
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+
+for (const [key, value] of gameEvents) {
+  console.log(
+    `${key < 45 ? `[1ST HALF] ${key}` : `[2ND HALF] ${key}`}: ${value}`
+  );
+}
