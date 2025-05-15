@@ -460,3 +460,37 @@ for (const [key, value] of question) {
 - easier to compute its size
 - Use when you simply need to map keys to values
 - use when you need keys that are **not** strings
+# 127. Challenge # 3
+
+- Finished.
+
+# 128. Working with Strings Part 1
+
+### String Methods of Note:
+
+- Since Strings are arrays, you can index them:
+```
+console.log("B737"[0]); // "B"
+```
+
+- indexOf() returns the index of the **first** occurrence of the specified character:
+```
+const airline = "TAP Air Portugal";
+console.log(airline.indexOf("r")); // 6th
+```
+
+- lastIndexOf() returns the index of the **last** occurrence of the specified character:
+```
+console.log(airline.lastIndexOf("r")); // 10th
+```
+
+- slice() returns the entire remaining string after the specified index:
+```
+console.log(airline.slice(4)); // 4th index: Air Portugal
+console.log(airline.slice(1, -1)); // Beginning (1st index) to End (last index): AP Air Portuga
+```
+
+
+- Why Strings (which are primitives) able to use methods?
+	- JS knows that Strings are to be turned into Objects at runtime via Boxing
+	

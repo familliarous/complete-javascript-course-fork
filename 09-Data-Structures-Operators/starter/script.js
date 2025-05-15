@@ -463,15 +463,51 @@ for (const [key, value] of question) {
   if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
 }
 
-const answer = Number(prompt("Your answer: "));
+// const answer = Number(prompt("Your answer: "));
 
 // My answer...
 // console.log(
 //   answer == question.get("correct") ? question.get(true) : question.get(false)
 // );
 
-console.log(question.get(question.get("correct") === answer));
+// console.log(question.get(question.get("correct") === answer));
 
 // Convert map to array
 
-console.log([...question]);
+// console.log([...question]);
+
+// 128. Working With Strings - Part 1
+
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(plane[0]);
+console.log(plane[0]);
+
+console.log("B737"[0]);
+console.log("B737".length);
+
+console.log(airline.indexOf("r")); // 6th
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("portugal"));
+
+console.log(airline.slice(4)); // 4th index: Air Portugal
+
+console.log(airline.slice(-2)); // Starting from the last index: al
+
+console.log(airline.slice(1, -1)); // Beginning (1st index) to End (last index): AP Air Portug a
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats:
+  const s = seat.slice(-1);
+  if (s === "B" || s === "E") console.log("You got the middle seat :|");
+  else console.log("You got lucky B-)");
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+console.log(new String("jonas"));
+
+console.log(typeof new String("jonas"));
