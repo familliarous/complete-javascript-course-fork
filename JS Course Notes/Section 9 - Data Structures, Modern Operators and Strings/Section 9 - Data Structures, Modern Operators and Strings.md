@@ -493,4 +493,58 @@ console.log(airline.slice(1, -1)); // Beginning (1st index) to End (last index):
 
 - Why Strings (which are primitives) able to use methods?
 	- JS knows that Strings are to be turned into Objects at runtime via Boxing
-	
+
+# 129. Working with Strings Part 2
+
+### More String functions of note:
+
+- toLowerCase() - makes all chars in the string lowercase.
+- toUpperCase() - makes all chars in the string uppercase.
+```
+console.log(airline.toLowerCase()); // tap air portugal
+
+console.log(airline.toUpperCase()); // TAP AIR PORTUGAL
+```
+- trim() - trims all all whitespace from the string
+- replace() - replaces **only the first occurrence** of the specified string.
+- replaceAll() - replaces **all** of the occurences of the specified string.
+```
+// replacing
+
+const priceGB = "288,97£";
+
+const priceUS = priceGB.replace("£", "$").replace(",", ".");
+
+console.log(priceUS);
+
+  
+
+const announcement =
+
+  "All Passengers come to boarding door 23. Boarding door 23!";
+
+
+console.log(announcement.replace("door", "gate")); // replaces only first 'door'
+
+console.log(announcement.replaceAll("door", "gate")); // replaces all 'door's
+```
+
+- startsWith() - checks if the string starts with the specified string.
+- endsWith() - checks if the string ends with the specified string.
+
+
+# 130. Working with Strings - Part 3
+
+- split() - Splits a string into an array depending on the delimiter defined in the function.
+```
+console.log("a+very+nice+string".split("+")); // splits the string based on the delimiter defined (+)
+```
+- padStart() - Pads a string from the start of its index with the specified character until the string reaches the length specified
+```
+console.log(message.padStart(25, "+")); // +++++++++++Go to gate 23!
+
+```
+- repeat() - Repeats the string based on the number of times defined in the parameter.
+```
+
+```
