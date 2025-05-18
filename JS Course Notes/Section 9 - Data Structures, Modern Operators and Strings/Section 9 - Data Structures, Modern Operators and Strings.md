@@ -553,3 +553,11 @@ console.log(message.padStart(25, "+")); // +++++++++++Go to gate 23!
 # 131. CHALLENGE # 4
 
 # TODO: Fix implementation....
+
+# [18/05/2025] NOTES
+
+- DONE
+# 132. String Methods Practice
+
+- Skipped...
+
