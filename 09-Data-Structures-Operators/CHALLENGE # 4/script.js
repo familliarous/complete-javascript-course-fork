@@ -31,4 +31,28 @@ GOOD LUCK 😀
 */
 document.body.append(document.createElement("textarea"));
 document.body.append(document.createElement("button"));
-const text = document.querySelector("textarea").value;
+
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+  const text = document.querySelector("textarea").value;
+  underScore2CamelCase(text);
+});
+
+const underScore2CamelCase = function (inputText) {
+  const splitInputText = inputText.split("\n");
+  const convertedText = [];
+
+  for (const line of splitInputText) {
+    const words = line.toLowerCase().trim().split("_");
+    for (let i = 1; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].slice(+1);
+    }
+    convertedText.push(words.join(""));
+  }
+
+  for (let i = 0; i < convertedText.length; i++) {
+    console.log(
+      `${convertedText[i]}${i === convertedText.length - 1 ? "\t" : "\t\t"}${"✅".repeat(i + 1)}`
+    );
+  }
+};
