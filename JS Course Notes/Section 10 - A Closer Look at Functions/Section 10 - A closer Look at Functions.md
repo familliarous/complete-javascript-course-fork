@@ -97,3 +97,35 @@ greeterHey('Steven');
 ```
 greet('Hello')('Jonas'); // passes hello as greeting, jonas as name
 ```
+
+# 140. The call and apply Methods
+
+- call and apply are two ways to apply functions into a more closed context (like catering to separate objects)  
+
+### Call method
+
+Syntax:
+```
+// function.call(<object that will call function>, <parameters of function...>)
+book.call(eurowings, 23, 'Monoco');
+
+console.log(eurowings);
+```
+
+### Apply method
+
+- Similar to call, but instead of taking in parameters of the function, it takes an array of arguments.
+Syntax:
+```
+const flightData = [583, 'George Cooper'];
+
+book.apply(swiss, flightData);
+
+console.log(swiss); // George Cooper booked a seat on Swiss Air Lines flight LX583
+```
+
+- Not used that much anymore because using .call() with spread operator works the same:
+```
+
+book.call(swiss, ...flightData);
+```

@@ -129,3 +129,54 @@ const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetReWrite('Bonjour')('Gustave');
 greetReWrite('Bonjour')('Maelle');
+
+// 140. The call and apply methods
+console.log('140. The call and apply methods');
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, 'Lune');
+lufthansa.book(635, 'Sciel');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+// does NOT work
+// book(23, 'Monoco');
+
+// Call method
+book.call(eurowings, 23, 'Monoco');
+console.log(eurowings);
+
+book.call(lufthansa, 239, 'Verso');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 583, 'Verso');
+
+// Apply method, not much used anymore
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+// ...because we can just spread the data
+book.call(swiss, ...flightData);
