@@ -68,4 +68,32 @@ function count() { // <---  Higher order function
 # 138. Functions Accepting Callback Functions
 
 - You can apply abstraction via callback functions.  You can obscure the functionality of most of your code by passing them through other functions. Of course, you need proper justification for choices like these.
-- 
+
+# 139. Functions Returning Other Functions
+
+```
+const greet = function (greeting) {
+
+  return function (name) {
+
+    console.log(`${greeting} ${name}`);
+
+  };
+
+};
+
+  
+
+// Works because of Closures (HIGHLY MISUNDERSTOOD TOPIC)
+
+const greeterHey = greet('Hey');
+
+greeterHey('Jonas');
+
+greeterHey('Steven');
+```
+
+- Works because of JS Closures
+```
+greet('Hello')('Jonas'); // passes hello as greeting, jonas as name
+```

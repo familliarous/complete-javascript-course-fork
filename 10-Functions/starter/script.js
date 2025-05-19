@@ -100,3 +100,32 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5); // <-- for each element in the array, run the passed function
+
+// 139. Functions Returning Other Functions
+console.log('139. Functions Returning Other Functions');
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+// Works because of Closures (HIGHLY MISUNDERSTOOD TOPIC)
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Jonas');
+
+// My Solution
+const greetReWrite = greeting => {
+  return name => {
+    console.log(`${greeting}, ${name}!`);
+  };
+};
+
+// Jonas' Solution
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetReWrite('Bonjour')('Gustave');
+greetReWrite('Bonjour')('Maelle');
