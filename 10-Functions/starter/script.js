@@ -46,18 +46,18 @@ const jonas = {
   passport: 24739479284,
 };
 
-const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH999';
-  passenger.name = 'Mr. ' + passenger.name;
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = 'LH999';
+//   passenger.name = 'Mr. ' + passenger.name;
 
-  if (passenger.passport === 24739479284) {
-    alert('Checked in!');
-  } else {
-    alert('Wrong Passport!');
-  }
-};
+//   if (passenger.passport === 24739479284) {
+//     alert('Checked in!');
+//   } else {
+//     alert('Wrong Passport!');
+//   }
+// };
 
-checkIn(flight, jonas);
+// checkIn(flight, jonas);
 console.log(flight);
 console.log(jonas);
 
@@ -66,4 +66,37 @@ const newPassport = function (person) {
 };
 
 newPassport(jonas);
-checkIn(flight, jonas);
+// checkIn(flight, jonas);
+
+// 138. Functions Accepting Callback Functions
+
+console.log('138. Functions Accepting Callback Functions');
+
+const oneWord = function (str) {
+  return str.replace('/ /g', '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+// Higher-order function: Operates at a higher level of abstraction.
+const transformer = function (str, fn) {
+  console.log(`Original String: ${str}`);
+  console.log(`Transformed String: ${fn(str)}`);
+  console.log(`Transformed By: ${fn.name}`);
+};
+
+transformer('JavaScript is the best!', upperFirstWord);
+
+transformer('JavaScript is the best!', oneWord);
+
+const high5 = function () {
+  console.log('👋');
+};
+
+// JS Uses callbacks all the time
+document.body.addEventListener('click', high5);
+
+['Jonas', 'Martha', 'Adam'].forEach(high5); // <-- for each element in the array, run the passed function
