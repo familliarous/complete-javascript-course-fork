@@ -129,3 +129,12 @@ console.log(swiss); // George Cooper booked a seat on Swiss Air Lines flight LX5
 
 book.call(swiss, ...flightData);
 ```
+
+# [21/05/2025] NOTES
+
+# 141. The bind method
+
+- The bind method works a lot like call, but it returns a function with the this keyword set to the object you define in its parameters:
+```
+const bookEw = book.bind(eurowings); // bind returns a new function
+```
