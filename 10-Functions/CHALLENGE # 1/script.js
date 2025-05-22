@@ -1,3 +1,4 @@
+"use strict";
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -36,4 +37,46 @@ const poll = {
   question: "What is your favourite programming language?",
   options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
   answers: new Array(4).fill(0),
+  displayResults: function (type = "array") {
+    switch (type) {
+      case "array":
+        console.log(this.answers);
+        break;
+      case "string":
+        console.log(`Poll results are ${this.answers.join(", ")}`);
+        break;
+      default:
+        console.log(typeof type);
+    }
+  },
+  registerNewAnswer: function () {
+    var answer = Number(
+      prompt(
+        `What is your favourite programming language?
+        0: JavaScript
+        1: Python
+        2: Rust
+        3: C++
+        (Write option number)`
+      )
+    );
+    typeof answer === "number" &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+
+    poll.displayResults();
+    poll.displayResults("string");
+  },
 };
+
+document
+  .querySelector(".poll")
+  .addEventListener("click", poll.registerNewAnswer.bind(poll));
+
+const testData1 = [5, 2, 3];
+const testData2 = [1, 5, 3, 9, 6, 1];
+
+poll.displayResults.call({ answers: testData1 }, "array");
+poll.displayResults.call({ answers: testData1 }, "string");
+poll.displayResults.call({ answers: testData2 }, "array");
+poll.displayResults.call({ answers: testData2 }, "string");
