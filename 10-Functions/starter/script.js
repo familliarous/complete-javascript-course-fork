@@ -257,3 +257,23 @@ runOnce();
 
 // console.log(isPrivate); < --- will throw an exception
 console.log(notPrivate); // since declared with var, will work
+
+// 144. Closures
+console.log('// 144. Closures');
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+console.dir(booker);

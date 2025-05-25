@@ -170,5 +170,34 @@ const bookEw = book.bind(eurowings); // bind returns a new function
 
 - Why use these? 
 	- Useful for await and async.
+
+
+# 144. Closures
+
 - How does this work?
-	- 
+	- When a function returns another function, it transfers its variable context to the variable it is assigned to--therefore transferring its variable context to the execution context of thnew variable. The old execution context for the returning function is removed from the global EC.
+	- The variable environment popped off the stack after the returning function finished executing.
+	- Because of **closures**, the Variable Environment was **moved up** to the heap and **NOT** garbage collected.
+	- Any function that was created under the execution context of its creator (booker(), in this case, was created in the context of secureBooking. So it will always have access to the variable environment of secureBooking.)
+
+- This link between secureBooking and booker via the secureBooking's Variable Environment is the **closure.**
+- Syntax:
+```
+const secureBooking = function () {
+
+  let passengerCount = 0;
+  
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking(); // global context
+booker(); 
+``` 
+
+- A **closure** is the closed-over variable environment of the execution context in which a function was created, even after that execution context is gone;
+- a closure gives a function access to all the variables of its parent function, even after that parent function has returned. The function keeps a reference to its outer scope, which preserves the scope chain throughout time.
+
+- Closures are automatically made by JS and it is an internal property of a function.
