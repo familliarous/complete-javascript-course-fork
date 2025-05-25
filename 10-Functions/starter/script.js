@@ -229,3 +229,31 @@ const addTaxFunc = function (rate) {
 const addVatFunc = addTaxFunc(0.23);
 
 console.log(addVatFunc(100));
+
+// 143. Immediately Invoked Function Expressions
+
+console.log('// 143. Immediately Invoked Function Expressions');
+
+const runOnce = function () {
+  console.log('This will never run again');
+}; // Can just run again.
+runOnce();
+
+// wrap function in parenthesis
+(function () {
+  console.log('This will never run again...');
+})();
+
+// same goes for arrow
+
+(() => {
+  console.log('This will ALSO never run again...');
+})();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+
+// console.log(isPrivate); < --- will throw an exception
+console.log(notPrivate); // since declared with var, will work

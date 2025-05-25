@@ -138,3 +138,37 @@ book.call(swiss, ...flightData);
 ```
 const bookEw = book.bind(eurowings); // bind returns a new function
 ```
+
+
+# [25/05/2025] NOTES
+# 143. Immediately Invoked Function Expressions (IIFE)
+
+- Syntax:
+```
+  
+
+// wrap function in parenthesis
+
+(function () {
+
+  console.log('This will never run again...');
+
+})();
+
+  
+
+// same goes for arrow
+
+  
+
+(() => {
+
+  console.log('This will ALSO never run again...');
+
+})();
+```
+
+- Why use these? 
+	- Useful for await and async.
+- How does this work?
+	- 
