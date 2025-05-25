@@ -201,3 +201,5 @@ booker();
 - a closure gives a function access to all the variables of its parent function, even after that parent function has returned. The function keeps a reference to its outer scope, which preserves the scope chain throughout time.
 
 - Closures are automatically made by JS and it is an internal property of a function.
+
+# 145. More closure examples
