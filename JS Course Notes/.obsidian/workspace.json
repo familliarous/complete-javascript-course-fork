@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Section 10 - A Closer Look at Functions/Section 10 - A closer Look at Functions.md",
+                "file": "Section 11 - Working with Arrays (PROJECT)/Section 11 - Working with Arrays (PROJECT).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Section 10 - A closer Look at Functions"
+              "title": "Section 11 - Working with Arrays (PROJECT)"
             }
           },
           {
@@ -199,8 +199,10 @@
   },
   "active": "83db6303126fd289",
   "lastOpenFiles": [
-    "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
     "Section 10 - A Closer Look at Functions/Section 10 - A closer Look at Functions.md",
+    "Section 11 - Working with Arrays (PROJECT)/Section 11 - Working with Arrays (PROJECT).md",
+    "Section 11 - Working with Arrays (PROJECT)",
+    "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
     "Pasted image 20250519164001.png",
     "Section 10 - A Closer Look at Functions",
     "Section 7 - DOM and Events (PROJECT)/Section 7 - DOM and Events (PROJECT).md",
@@ -224,7 +226,6 @@
     "Images/Pasted image 20250318151549.png",
     "Section 3 - Javascript Fundamentals Pt 2",
     "create a link.md",
-    "Section 2 - Javascript Fundamentals Pt 1/Untitled",
     "Welcome.md"
   ]
 }
