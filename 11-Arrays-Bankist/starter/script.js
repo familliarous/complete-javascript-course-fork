@@ -123,3 +123,6 @@ console.log(arr.at(0)); // the same as indexing [0].
 console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 console.log(arr.at(-2));
+
+// you can use this for strings also:
+console.log('jonas'.at(0));
