@@ -43,4 +43,43 @@ console.log('jonas'.at(0));
 
 # 151. Looping Arrays: forEach
 
-- Syntax:
+- Syntax: movements.forEach(function (mov, i, arr) {
+
+  // 1st param: current element, 2nd param: current index, 3rd param: entire array being looped over
+
+  if (mov > 0) {
+
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+
+  } else {
+
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+
+  }
+
+});
+
+
+# 154. Creating DOM Elements
+
+
+- insertADjacentHTML(position)
+- Sample syntax:
+```
+    containerMovements.insertAdjacentHTML('afterbegin');
+
+// parameters to pass:
+beforebegin
+afterbegin
+beforeend
+afterend
+```
+
+# Why afterEnd?
+
+- afterEnd - any new children will appear before all other elements.
+
+
+# [08/06/2025] NOTES
+
+- 
