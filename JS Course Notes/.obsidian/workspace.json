@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
+                "file": "Section 11 - Working with Arrays (PROJECT)/Section 11 - Working with Arrays (PROJECT).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Section 9 - Data Structures, Modern Operators and Strings"
+              "title": "Section 11 - Working with Arrays (PROJECT)"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Section 11 - Working with Arrays (PROJECT)/Section 11 - Working with Arrays (PROJECT).md",
+                "file": "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Section 11 - Working with Arrays (PROJECT)"
+              "title": "Section 9 - Data Structures, Modern Operators and Strings"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "JS Fundamentals Pt. 2 Notes"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "4853b187305304f5",
@@ -198,20 +196,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "83db6303126fd289",
+  "active": "9f5536b6d0cc5871",
   "lastOpenFiles": [
     "Section 10 - A Closer Look at Functions/Section 10 - A closer Look at Functions.md",
+    "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
+    "Section 3 - Javascript Fundamentals Pt 2/JS Fundamentals Pt. 2 Notes.md",
+    "Section 8 - How JavaScript Works Behind The Scenes/Section 8 - How JavaScript Works Behind The Scenes.md",
     "Section 11 - Working with Arrays (PROJECT)/Section 11 - Working with Arrays (PROJECT).md",
     "Section 11 - Working with Arrays (PROJECT)",
-    "Section 9 - Data Structures, Modern Operators and Strings/Section 9 - Data Structures, Modern Operators and Strings.md",
     "Pasted image 20250519164001.png",
     "Section 10 - A Closer Look at Functions",
     "Section 7 - DOM and Events (PROJECT)/Section 7 - DOM and Events (PROJECT).md",
-    "Section 3 - Javascript Fundamentals Pt 2/JS Fundamentals Pt. 2 Notes.md",
     "Section 2 - Javascript Fundamentals Pt 1/Javascript Introduction.md",
     "Section 2 - Javascript Fundamentals Pt 1/Javascript Coding notes.md",
     "Section 1 - Welcome/Course Information.md",
-    "Section 8 - How JavaScript Works Behind The Scenes/Section 8 - How JavaScript Works Behind The Scenes.md",
     "Section 9 - Data Structures, Modern Operators and Strings",
     "boxmodel.png",
     "Section 8 - How JavaScript Works Behind The Scenes",
