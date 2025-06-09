@@ -141,16 +141,16 @@ for (const movement of movements2) {
   }
 }
 
-console.log('-----FOREACH-----');
-// forEach method requires a callback function to tell it what to do per iteration
-movements.forEach(function (mov, i, arr) {
-  // 1st param: current element, 2nd param: current index, 3rd param: entire array being looped over
-  if (mov > 0) {
-    console.log(`Movement ${i + 1}: You deposited ${mov}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
-  }
-});
+// console.log('-----FOREACH-----');
+// // forEach method requires a callback function to tell it what to do per iteration
+// movements.forEach(function (mov, i, arr) {
+//   // 1st param: current element, 2nd param: current index, 3rd param: entire array being looped over
+//   if (mov > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${mov}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+//   }
+// });
 
 // 0: function(200)
 // 1: function(450)
@@ -181,3 +181,31 @@ const displayMovements = function (movements) {
 };
 
 displayMovements(account1.movements);
+
+// 157. The map method
+console.log('157. The map method');
+
+const eurToUsd = 1.1;
+
+// Original version
+const movementsUSD = movements.map(function (mov) {
+  return mov * eurToUsd;
+});
+
+// Arrow function version
+const movementsUSDCallback = movements.map(mov => mov * eurToUsd);
+
+console.log(movements);
+console.log(movementsUSD);
+console.log(movementsUSDCallback);
+
+// for of loop equivalent
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+// Map passes mov, i to the callback for each index.
+const movementsDescriptions = movements.map((mov, i) => {
+  return `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${mov}`;
+});
+console.log(movementsDescriptions);

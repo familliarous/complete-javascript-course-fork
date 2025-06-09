@@ -82,4 +82,24 @@ afterend
 
 # [08/06/2025] NOTES
 
-- 
+# 155. CHALLENGE #1
+
+- DONE
+# [09/06/2025] NOTES
+
+# 156. Data Transformations: map, filter, reduce
+
+- MAP - similar to for each, creates a new array based on the original array. Returns a new array containing the results of applying an operation on all original array elements. 
+Syntax:
+
+```
+const movementsUSD = movements.map(function (mov) {
+
+  return mov * eurToUsd;
+
+}); // Returns the result of the calc for each index 
+```
+
+- FILTER - Filters elements in the array that satisfies a given condition. Returns a new array that contains the elements that pass a specific test condition.
+- REDUCE - Reduces all array elements down to one single value (e.g. adding all elements together).
+ 
