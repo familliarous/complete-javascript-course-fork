@@ -20,38 +20,64 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+// Jonas' Solution:
+
 const dogsJulia1 = [3, 5, 2, 12, 7];
 const dogsKate1 = [4, 1, 15, 8, 3];
-const dogsJulia1Copy = Array.from(dogsJulia1);
+
 const dogsJulia2 = [9, 16, 6, 8, 3];
 const dogsKate2 = [10, 5, 6, 1, 4];
-const dogsJulia2Copy = Array.from(dogsJulia2);
-dogsJulia1Copy.splice(3, 2);
-dogsJulia2Copy.splice(3, 2);
-const dogsJulia1Kate1 = [...dogsJulia1Copy, ...dogsKate1];
-const dogsJulia2Kate2 = [...dogsJulia2Copy, ...dogsKate2];
 
 const checkDogs = function (dogsJulia, dogsKate) {
-  for (let i = 0; i < dogsJulia.length; i++) {
-    if (dogsJulia[i] >= 3) {
-      console.log(
-        `Dog number ${i + 1} is an Adult, and is ${dogsJulia[i]} years old`,
-      );
-    } else if (dogsJulia[i] < 3) {
-      console.log(`Dog number ${i + 1} is still just a Puppy 🐶`);
-    }
-  }
+  const dogsJuliaCorrected = dogsJulia.slice();
+  dogsJuliaCorrected.splice(0, 1);
+  dogsJuliaCorrected.splice(-2);
 
-  for (let i = 0; i < dogsKate.length; i++) {
-    if (dogsKate[i] >= 3) {
-      console.log(
-        `Dog number ${i + 1} is an Adult, and is ${dogsKate[i]} years old`,
-      );
-    } else if (dogsKate[i] < 3) {
-      console.log(`Dog number ${i + 1} is still just a Puppy 🐶`);
-    }
-  }
+  const dogs = dogsJuliaCorrected.concat(dogsKate);
+  console.log(dogs);
+
+  dogs.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(`Dog number ${i + 1} is ${dog} years old`);
+    } else console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+  });
 };
 
-checkDogs(dogsJulia1Copy, dogsKate1);
-checkDogs(dogsJulia2Copy, dogsKate2);
+checkDogs(dogsJulia2, dogsKate2);
+
+// My Solution:
+// const dogsJulia1 = [3, 5, 2, 12, 7];
+// const dogsKate1 = [4, 1, 15, 8, 3];
+// const dogsJulia1Copy = Array.from(dogsJulia1);
+// const dogsJulia2 = [9, 16, 6, 8, 3];
+// const dogsKate2 = [10, 5, 6, 1, 4];
+// const dogsJulia2Copy = Array.from(dogsJulia2);
+// dogsJulia1Copy.splice(3, 2);
+// dogsJulia2Copy.splice(3, 2);
+// const dogsJulia1Kate1 = [...dogsJulia1Copy, ...dogsKate1];
+// const dogsJulia2Kate2 = [...dogsJulia2Copy, ...dogsKate2];
+
+// const checkDogs = function (dogsJulia, dogsKate) {
+//   for (let i = 0; i < dogsJulia.length; i++) {
+//     if (dogsJulia[i] >= 3) {
+//       console.log(
+//         `Dog number ${i + 1} is an Adult, and is ${dogsJulia[i]} years old`,
+//       );
+//     } else if (dogsJulia[i] < 3) {
+//       console.log(`Dog number ${i + 1} is still just a Puppy 🐶`);
+//     }
+//   }
+
+//   for (let i = 0; i < dogsKate.length; i++) {
+//     if (dogsKate[i] >= 3) {
+//       console.log(
+//         `Dog number ${i + 1} is an Adult, and is ${dogsKate[i]} years old`,
+//       );
+//     } else if (dogsKate[i] < 3) {
+//       console.log(`Dog number ${i + 1} is still just a Puppy 🐶`);
+//     }
+//   }
+// };
+
+// checkDogs(dogsJulia1Copy, dogsKate1);
+// checkDogs(dogsJulia2Copy, dogsKate2);
