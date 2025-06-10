@@ -102,4 +102,33 @@ const movementsUSD = movements.map(function (mov) {
 
 - FILTER - Filters elements in the array that satisfies a given condition. Returns a new array that contains the elements that pass a specific test condition.
 - REDUCE - Reduces all array elements down to one single value (e.g. adding all elements together).
- 
+
+# [10/06/2025] NOTES
+
+# 158. Computing Usernames 
+
+### More on the Map method:
+
+```
+  
+
+const user = 'Steven Thomas Williams';
+
+const username = user
+
+  .toLowerCase()
+
+  .split(' ')
+
+  .map(function (name) {
+
+    return name[0]; // ["s"], ["t"], ["w"] 
+
+  });
+
+  
+
+console.log(username);
+```
+
+# 159. The Filter Method

@@ -209,3 +209,20 @@ const movementsDescriptions = movements.map((mov, i) => {
   return `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${mov}`;
 });
 console.log(movementsDescriptions);
+
+// 158. Computing Usernames
+
+console.log('158. Computing Usernames');
+
+const createUsernames = function (accts) {
+  accts.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+console.log(accounts);
