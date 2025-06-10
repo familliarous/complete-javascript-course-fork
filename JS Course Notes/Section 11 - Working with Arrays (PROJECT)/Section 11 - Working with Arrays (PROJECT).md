@@ -132,3 +132,16 @@ console.log(username);
 ```
 
 # 159. The Filter Method
+
+### Syntax:
+```
+const deposits = movements.filter(function (mov) {
+
+  return mov > 0;
+
+});
+
+console.log(movements); // [ 200, 450, -400, 3000, -650, -130, 70, 1300 ]
+
+console.log(deposits); //  [ 200, 450, 3000, 70, 1300 ]
+```

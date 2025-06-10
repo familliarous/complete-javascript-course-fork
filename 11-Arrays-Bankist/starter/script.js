@@ -226,3 +226,26 @@ const createUsernames = function (accts) {
 
 createUsernames(accounts);
 console.log(accounts);
+
+// 159. The filter method
+
+console.log('159. The filter method');
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+// same output, but with for of:
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
+
+// MY solution for withdrawals challenge
+const withdrawals = movements.filter(function (mov) {
+  return mov < 0;
+});
+
+console.log(movements);
+console.log(withdrawals);
