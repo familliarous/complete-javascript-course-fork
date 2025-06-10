@@ -145,3 +145,27 @@ console.log(movements); // [ 200, 450, -400, 3000, -650, -130, 70, 1300 ]
 
 console.log(deposits); //  [ 200, 450, 3000, 70, 1300 ]
 ```
+
+# 160. The reduce method
+
+# Syntax:
+
+```
+// Defined by: array.reduce(function(accumulator, current, index, array), 0) where 
+// Accumulator is the accumulator object (the value of the reduce method)
+// Current is current element
+// i is the current index
+// arr is the entire array
+// 0 is the initial accumulator value
+
+const balance = movements.reduce(function (acc, cur, i, arr) {
+
+  return acc + cur;
+
+}, 0);
+
+```
+Output:
+![[Pasted image 20250610162209.png]]
+
+

@@ -225,6 +225,12 @@ const createUsernames = function (accts) {
 };
 
 createUsernames(accounts);
+
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
 console.log(accounts);
 
 // 159. The filter method
@@ -249,3 +255,30 @@ const withdrawals = movements.filter(function (mov) {
 
 console.log(movements);
 console.log(withdrawals);
+
+// 160. The reduce method
+console.log('160. The reduce method');
+console.log(movements);
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
+calcDisplayBalance(account1.movements);
+
+// Max value of the movements array via Reduce
+// initial value must be first value of the array
+
+const maxMovementvalue = movements.reduce((acc, mov) => {
+  if (acc > mov) {
+    return acc;
+  } else {
+    return mov;
+  }
+}, movements[0]);
+
+console.log(maxMovementvalue);
