@@ -172,7 +172,7 @@ const displayMovements = function (movements) {
         <div class="movements__type movements__type--${type}"> ${
           i + 1
         } ${type}</div>
-          <div class = "movements__value">${mov}</div>
+          <div class = "movements__value">${mov}€</div>
         </div>
         `;
 
@@ -282,3 +282,41 @@ const maxMovementvalue = movements.reduce((acc, mov) => {
 }, movements[0]);
 
 console.log(maxMovementvalue);
+
+// 162. The magic of chaining methods
+
+console.log('162. The Magic of Chaining Methods');
+
+const totalDepositsInUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd)
+  // .map((mov, i, arr) => {
+  //   console.log(arr);
+  //   return mov * eurToUsd;
+  // })
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositsInUSD);
+
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc - mov, 0);
+  labelSumOut.textContent = `${out}€`;
+
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}€`;
+};
+
+calcDisplaySummary(account1.movements);

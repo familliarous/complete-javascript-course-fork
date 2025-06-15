@@ -169,3 +169,19 @@ Output:
 ![[Pasted image 20250610162209.png]]
 
 
+# [15/06/2025] NOTES
+# 162. The Magic of Chaining Methods
+
+- You can chain array methods like this:
+```
+const totalDepositsInUSD = movements
+
+  .filter(mov => mov > 0)
+
+  .map(mov => mov * eurToUsd)
+
+  .reduce((acc, mov) => acc + mov, 0);
+```
+
+- If working with a huge array, optimizing method chains is a must. As much as possible, minimize the usage of these method chains in bigger contexts.
+-
