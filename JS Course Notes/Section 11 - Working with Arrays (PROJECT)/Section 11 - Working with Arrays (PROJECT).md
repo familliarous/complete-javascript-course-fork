@@ -184,4 +184,15 @@ const totalDepositsInUSD = movements
 ```
 
 - If working with a huge array, optimizing method chains is a must. As much as possible, minimize the usage of these method chains in bigger contexts.
--
+
+# [16/06/2025] NOTES
+
+# 164. The find method
+
+- Syntax:
+```
+const firstWithdrawal = movements.find(mov => mov < 0); // find only returns the element
+```
+> Note: this method only returns the index, and not an array.
+
+# 165. Implementing Login
