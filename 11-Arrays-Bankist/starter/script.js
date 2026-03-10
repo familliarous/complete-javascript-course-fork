@@ -404,3 +404,17 @@ btnClose.addEventListener('click', function (e) {
   }
   inputCloseUsername.value = inputClosePin.value = '';
 });
+
+// 168. FindLast and FindLastIndex (ES6)
+
+console.log(movements);
+const lastWithdrawal = movements.findLast(mov => mov > 0);
+console.log(lastWithdrawal);
+
+const latestLargeMovementIndex = movements.findLastIndex(
+  mov => Math.abs(mov) > 2000,
+);
+console.log(latestLargeMovementIndex);
+console.log(
+  `Your latest large movement was ${movements.length - latestLargeMovementIndex} movements ago`,
+);
