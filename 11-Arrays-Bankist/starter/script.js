@@ -451,3 +451,36 @@ const deposit = mov => mov > 0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
+
+// 170. Flat and Flatmap
+
+// flat() flattens the array
+const flatmapArray = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(flatmapArray.flat());
+
+// flat() when multiple dimensions deep
+const deepArray = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+// using a depth (2 levels deep)
+console.log(deepArray.flat(2));
+
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance);
+
+const overallBalance = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(overallBalance);
+
+// Doing the same operation but with flatmap():
+
+const overallBalance2 = accounts
+  .flatMap(acc => movements) // Drawback: Does not go deeper than one level.
+  .reduce((acc, mov) => acc + mov);
+
+console.log(overallBalance);
