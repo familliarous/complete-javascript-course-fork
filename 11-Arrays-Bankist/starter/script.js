@@ -418,3 +418,36 @@ console.log(latestLargeMovementIndex);
 console.log(
   `Your latest large movement was ${movements.length - latestLargeMovementIndex} movements ago`,
 );
+
+// 169. Some and Every
+
+// Using includes (Only tests for equalit
+console.log(movements.includes(-130));
+
+// Using some (Checks array contents if it has a condition)
+const anyDeposits = movements.some(mov => mov > 1400);
+console.log(anyDeposits);
+
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // Add movement
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
+
+// using every (Checks array if all conditions are true)
+
+// console.log(movements.every(mov => mov > 0));
+// console.log(account4.movements.every(mov => mov > 0));
+
+// using separate callbacks from a single condition (deposit):
+
+const deposit = mov => mov > 0;
+
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
