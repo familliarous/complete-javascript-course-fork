@@ -164,8 +164,12 @@ for (const movement of movements2) {
 
 console.log('154. Creating DOM Elements');
 
-const displayMovements = function (movements) {
-  movements.forEach(function (mov, i) {
+const displayMovements = function (movements, sort = false) {
+  containerMovements.innerHTML = '';
+
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
       <div class="movements__row">
@@ -484,3 +488,46 @@ const overallBalance2 = accounts
   .reduce((acc, mov) => acc + mov);
 
 console.log(overallBalance);
+
+// 172. Sorting Arrays
+
+// Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+console.log(owners);
+
+// Numbers
+console.log(movements);
+console.log(movements.sort()); // <-- Sorts based on the strings, not the actual value of numbers.
+
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+// movements.sort((a, b) => {
+//   // a and b are 2 consecutive numbers in the array
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+
+// console.log(movements);
+
+console.log('a-b');
+
+movements.sort((a, b) => a - b);
+
+console.log(movements);
+
+console.log('b-a');
+
+movements.sort((a, b) => b - a);
+
+console.log(movements);
+
+// Frontend integ
+
+let sorted = false;
+
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
