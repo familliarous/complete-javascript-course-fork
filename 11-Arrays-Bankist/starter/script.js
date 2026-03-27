@@ -421,7 +421,7 @@ console.log(
 
 // 169. Some and Every
 
-// Using includes (Only tests for equalit
+// Using includes (Only tests for equality)
 console.log(movements.includes(-130));
 
 // Using some (Checks array contents if it has a condition)
