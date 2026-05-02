@@ -561,3 +561,40 @@ console.log(groupedByActivity);
 
 const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
 console.log(groupedAccounts);
+
+// 174. More ways of creating and Filing Arrays
+
+console.log('174. More ways of creating and Filing Arrays');
+
+// Empty arrays + fill method
+const x = new Array(7);
+console.log(x);
+
+// Fill method
+x.fill(1, 3, 6); // fills indices 3-5 with 1
+
+console.log(x);
+
+// Array.from
+// Create an array from an iterable object, then functionally fill it with 1s
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+// using this as a callback function in calling the map method on an empty array (?)
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+// Nodelist is an Array-like structure, allowing the raw elements to be converted
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', '')),
+  );
+
+  console.log(movementsUI);
+});
+
+// SKIPPING: 175. toReversed, toSorted, toSpliced, with
+
+// 176. Summary: Which Array Method to Use?
