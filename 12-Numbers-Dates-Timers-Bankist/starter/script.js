@@ -335,3 +335,38 @@ console.log(PI);
 
 console.log(Number('230_000')); // NaN
 console.log(parseInt('230_000')); // 230 since it's being parsed.
+
+// 185. Working with BigInt
+
+// Int is unpredictable
+
+console.log(2 ** 53 - 1); // 9007199254740991
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(2 ** 53 + 0); // 9007199254740992
+
+// Using BigInt
+
+console.log(487384982732897429123123384n); //487384982732897429384n
+console.log(BigInt(487384982732897429123123384)); //48784982732897414220349440n Should probably only use this constructor for smaller numbers.
+console.log(10000n + 10000n); // 20000n
+console.log(1233455678623445656721345466n * 100000n); // 123345567862344565672134546600000n
+
+// console.log(Math.sqrt(16n)); // Can't convert BigInt to a number (can't use Math ops on BigInt)
+
+// Operations
+const huge = 2343243242342344243234234423432n;
+const num = 23;
+// console.log(huge * num); // Error. Cannot convert BigInt to a number
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15); // true
+console.log(20n === 20); // false
+console.log(typeof 20n); // bigint
+console.log(20n == 20); // true (type coercion)
+
+console.log(huge + ' is REALLY big!!!!!!!!!!!!'); // 2343243242342344243234234423432 is REALLY big!!!!!!!!!!!!
+
+// Divisions
+console.log(10n / 3n); // 3n (Cuts decimal parts)
+console.log(10 / 3); // 3.3333333333333335
