@@ -305,3 +305,14 @@ randomInt(10, 20);
 randomInt(0, 3);
 
 // SKIPPING TO 183. THE REMAINDER OPERATOR
+
+console.log(5 % 2); // 5 Modulo 2 = 1
+
+// modifying the bankist app
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered'; // 0, 2, 4, 6
+    if (i % 3 === 0) row.style.backgroundColor = 'blue'; // 0, 3, 6, 9
+  });
+});
