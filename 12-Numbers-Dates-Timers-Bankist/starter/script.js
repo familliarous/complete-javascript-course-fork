@@ -280,3 +280,28 @@ console.log(Number.isFinite(20));
 console.log(Number.isFinite('20'));
 console.log(Number.isFinite(+'20x'));
 console.log(Number.isFinite(23 / 0));
+
+// 182. Math and Rounding
+
+console.log(Math.sqrt(25)); // Square Root
+console.log(25 ** (1 / 2)); // Square root, 25^0.5
+console.log(8 ** (1 / 3)); // Cubic Root
+
+console.log(Math.max(5, 12, 4, 56, 7856, 12)); // Returns Max
+console.log(Math.max(5, 12, 4, '56', 7856, 12)); // Auto-converts
+console.log(Math.max(5, 12, 4, '56px', 7856, 12)); // NaN. Does not parse
+console.log(Math.min(5, 12, 4, 2, 7856, 12)); // NaN. Does not parse
+
+console.log(Math.PI); // 3.14...
+console.log(Math.PI * Number.parseFloat('10px') ** 2); // Calculate the area of a circle with that radius
+
+// Generate proper random values
+
+console.log(Math.trunc(Math.random() * 6) + 1); // V1. Generates a number from 1-6
+
+const randomInt = (min, max) => Math.random() * 2;
+
+randomInt(10, 20);
+randomInt(0, 3);
+
+// SKIPPING TO 183. THE REMAINDER OPERATOR
