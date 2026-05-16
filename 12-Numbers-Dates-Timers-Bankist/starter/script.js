@@ -316,3 +316,22 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue'; // 0, 3, 6, 9
   });
 });
+
+// 184. Numeric Separators
+
+// 287,460,000,000
+const diameter = 287_460_000_000; // numeric separator
+console.log(diameter);
+
+const priceCents = 345_99;
+console.log(priceCents);
+
+const transferFee = 15_00;
+console.log(priceCents);
+
+// const PI = 3._1415; // not allowed
+const PI = 3.1415;
+console.log(PI);
+
+console.log(Number('230_000')); // NaN
+console.log(parseInt('230_000')); // 230 since it's being parsed.
