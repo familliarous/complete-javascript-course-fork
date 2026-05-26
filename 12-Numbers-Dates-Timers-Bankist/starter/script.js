@@ -370,3 +370,33 @@ console.log(huge + ' is REALLY big!!!!!!!!!!!!'); // 234324324234234424323423442
 // Divisions
 console.log(10n / 3n); // 3n (Cuts decimal parts)
 console.log(10 / 3); // 3.3333333333333335
+
+// 186. Creating Dates
+
+// Create a Date
+
+// const now = new Date();
+// console.log(now);
+
+// console.log(new Date('Aug 02 2020 18:05:41'));
+// console.log(new Date('December 24, 2015'));
+// console.log(new Date(account1.movementsDates[0]));
+
+// console.log(new Date(2037, 10, 19, 15, 23, 5));
+// console.log(new Date(2037, 10, 31));
+
+// console.log(new Date(0));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));A
+
+// Working with dates
+
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear()); // do NOT use getYear() for getting full year's worth of dates
+console.log(future.getMonth()); // 10 (0-based, 11th month, November)
+console.log(future.getDay()); // 4, it's a thursday
+console.log(future.getHours()); // 15
+console.log(future.getMinutes()); // 23
+console.log(future.getSeconds()); // 0
+console.log(future.toISOString()); // 2037-11-19T07:23:00.000Z
+console.log(future.getTime());
