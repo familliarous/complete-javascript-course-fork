@@ -135,37 +135,37 @@ logo.className = 'jonas';
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect(); // Relative to the visible viewport
-  console.log(s1coords);
+// btnScrollTo.addEventListener('click', function (e) {
+//   const s1coords = section1.getBoundingClientRect(); // Relative to the visible viewport
+//   console.log(s1coords);
 
-  console.log(e.target.getBoundingClientRect());
+//   console.log(e.target.getBoundingClientRect());
 
-  console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+//   console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
 
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth,
-  );
+//   console.log(
+//     'height/width viewport',
+//     document.documentElement.clientHeight,
+//     document.documentElement.clientWidth,
+//   );
 
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset, // current position + current scroll
-  //   s1coords.top + window.pageYOffset,
-  // ); // relative to VIEWPORT, not document. Adding the offset (top of the page) fixes this.
+//   // window.scrollTo(
+//   //   s1coords.left + window.pageXOffset, // current position + current scroll
+//   //   s1coords.top + window.pageYOffset,
+//   // ); // relative to VIEWPORT, not document. Adding the offset (top of the page) fixes this.
 
-  // Smoothing (Old way)
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset, // current position + current scroll
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
+//   // Smoothing (Old way)
+//   // window.scrollTo({
+//   //   left: s1coords.left + window.pageXOffset, // current position + current scroll
+//   //   top: s1coords.top + window.pageYOffset,
+//   //   behavior: 'smooth',
+//   // });
 
-  // Smoothing (new way, modern browsers)
-  section1.scrollIntoView({
-    behavior: 'smooth',
-  });
-});
+//   // Smoothing (new way, modern browsers)
+//   section1.scrollIntoView({
+//     behavior: 'smooth',
+//   });
+// });
 
 // 201. Types of Events and Event Handlers
 
@@ -188,3 +188,29 @@ h1.addEventListener('mouseenter', alertH1);
 setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 // 204. Event Delegation: Implementing Page Navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({
+//       behavior: 'smooth',
+//     });
+//   });
+// });
+
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+});
