@@ -243,3 +243,35 @@ console.log(h1.nextElementSibling);
 });
 
 // 206. Building a Tabbed Component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+// Bad Practice (Will create the same amount of callbacks as the amount of tabs)
+// tabs.forEach(t => t.addEventListener('click', () => console.log('TAB')));
+
+// Using Event Delegation
+tabsContainer.addEventListener('click', function (e) {
+  // const clicked = e.target // will target the element specifically
+  // use closest() to search for the closest parent
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked);
+  // clicked.classList.add('operations__tab--active'); // will cause an error because null is the parent
+  // add guard clause
+  if (!clicked) return;
+  // THEN add the classlist.add:
+
+  // Remove Active Classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+  // activate tab
+  clicked.classList.add('operations__tab--active');
+  // const tab_content = document.querySelector('.operations__content--2');
+  // console.log(tab_content);
+  console.log(clicked.dataset.tab);
+  // Activate content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
